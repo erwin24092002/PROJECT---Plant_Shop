@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fMainMenu));
             this.pMenu = new System.Windows.Forms.Panel();
             this.btnSetting = new FontAwesome.Sharp.IconButton();
             this.btnMarketing = new FontAwesome.Sharp.IconButton();
@@ -82,7 +83,7 @@
             this.btnSetting.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnSetting.IconSize = 32;
             this.btnSetting.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSetting.Location = new System.Drawing.Point(0, 440);
+            this.btnSetting.Location = new System.Drawing.Point(0, 402);
             this.btnSetting.Name = "btnSetting";
             this.btnSetting.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnSetting.Size = new System.Drawing.Size(230, 60);
@@ -104,7 +105,7 @@
             this.btnMarketing.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMarketing.IconSize = 32;
             this.btnMarketing.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMarketing.Location = new System.Drawing.Point(0, 380);
+            this.btnMarketing.Location = new System.Drawing.Point(0, 342);
             this.btnMarketing.Name = "btnMarketing";
             this.btnMarketing.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnMarketing.Size = new System.Drawing.Size(230, 60);
@@ -126,7 +127,7 @@
             this.btnCustomer.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnCustomer.IconSize = 32;
             this.btnCustomer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCustomer.Location = new System.Drawing.Point(0, 320);
+            this.btnCustomer.Location = new System.Drawing.Point(0, 282);
             this.btnCustomer.Name = "btnCustomer";
             this.btnCustomer.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnCustomer.Size = new System.Drawing.Size(230, 60);
@@ -148,7 +149,7 @@
             this.btnProduct.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnProduct.IconSize = 32;
             this.btnProduct.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProduct.Location = new System.Drawing.Point(0, 260);
+            this.btnProduct.Location = new System.Drawing.Point(0, 222);
             this.btnProduct.Name = "btnProduct";
             this.btnProduct.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnProduct.Size = new System.Drawing.Size(230, 60);
@@ -170,7 +171,7 @@
             this.btnOrder.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnOrder.IconSize = 32;
             this.btnOrder.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnOrder.Location = new System.Drawing.Point(0, 200);
+            this.btnOrder.Location = new System.Drawing.Point(0, 162);
             this.btnOrder.Name = "btnOrder";
             this.btnOrder.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnOrder.Size = new System.Drawing.Size(230, 60);
@@ -192,7 +193,7 @@
             this.btnDashboard.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnDashboard.IconSize = 32;
             this.btnDashboard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDashboard.Location = new System.Drawing.Point(0, 140);
+            this.btnDashboard.Location = new System.Drawing.Point(0, 102);
             this.btnDashboard.Name = "btnDashboard";
             this.btnDashboard.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnDashboard.Size = new System.Drawing.Size(230, 60);
@@ -209,15 +210,15 @@
             this.pLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.pLogo.Location = new System.Drawing.Point(0, 0);
             this.pLogo.Name = "pLogo";
-            this.pLogo.Size = new System.Drawing.Size(230, 140);
+            this.pLogo.Size = new System.Drawing.Size(230, 102);
             this.pLogo.TabIndex = 0;
             // 
             // btnLogo
             // 
             this.btnLogo.Image = global::Shopping_App.Properties.Resources.nobd_logo;
-            this.btnLogo.Location = new System.Drawing.Point(12, 3);
+            this.btnLogo.Location = new System.Drawing.Point(9, 3);
             this.btnLogo.Name = "btnLogo";
-            this.btnLogo.Size = new System.Drawing.Size(212, 131);
+            this.btnLogo.Size = new System.Drawing.Size(212, 95);
             this.btnLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnLogo.TabIndex = 0;
             this.btnLogo.TabStop = false;
@@ -234,7 +235,7 @@
             this.pTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.pTitleBar.Location = new System.Drawing.Point(230, 0);
             this.pTitleBar.Name = "pTitleBar";
-            this.pTitleBar.Size = new System.Drawing.Size(889, 75);
+            this.pTitleBar.Size = new System.Drawing.Size(889, 61);
             this.pTitleBar.TabIndex = 1;
             // 
             // icZoomIn
@@ -302,11 +303,11 @@
             // 
             this.lbTitleChileForm.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbTitleChileForm.AutoSize = true;
-            this.lbTitleChileForm.Font = new System.Drawing.Font("Edwardian Script ITC", 34.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTitleChileForm.Font = new System.Drawing.Font("Cooper Black", 25.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTitleChileForm.ForeColor = System.Drawing.Color.Gainsboro;
-            this.lbTitleChileForm.Location = new System.Drawing.Point(369, 4);
+            this.lbTitleChileForm.Location = new System.Drawing.Point(374, 9);
             this.lbTitleChileForm.Name = "lbTitleChileForm";
-            this.lbTitleChileForm.Size = new System.Drawing.Size(147, 69);
+            this.lbTitleChileForm.Size = new System.Drawing.Size(148, 50);
             this.lbTitleChileForm.TabIndex = 1;
             this.lbTitleChileForm.Text = "Home";
             this.lbTitleChileForm.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -316,7 +317,7 @@
             // 
             this.pShadow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(24)))), ((int)(((byte)(58)))));
             this.pShadow.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pShadow.Location = new System.Drawing.Point(230, 75);
+            this.pShadow.Location = new System.Drawing.Point(230, 61);
             this.pShadow.Name = "pShadow";
             this.pShadow.Size = new System.Drawing.Size(889, 9);
             this.pShadow.TabIndex = 2;
@@ -325,9 +326,9 @@
             // 
             this.pDesktop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.pDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pDesktop.Location = new System.Drawing.Point(230, 84);
+            this.pDesktop.Location = new System.Drawing.Point(230, 70);
             this.pDesktop.Name = "pDesktop";
-            this.pDesktop.Size = new System.Drawing.Size(889, 485);
+            this.pDesktop.Size = new System.Drawing.Size(889, 499);
             this.pDesktop.TabIndex = 3;
             // 
             // fMainMenu
@@ -339,6 +340,7 @@
             this.Controls.Add(this.pShadow);
             this.Controls.Add(this.pTitleBar);
             this.Controls.Add(this.pMenu);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "fMainMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainMenu";

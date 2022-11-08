@@ -31,10 +31,10 @@ namespace Shopping_App
             this.Text = string.Empty;
             this.ControlBox = false;
             this.DoubleBuffered = true;
-            /*this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;*/
+            this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
         }
 
-        // Structs
+        // Structss
         private struct RGBColors
         {
             public static Color color1 = Color.FromArgb(172, 126, 241);
