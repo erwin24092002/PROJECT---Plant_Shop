@@ -37,32 +37,32 @@ namespace Shopping_App
         // Structss
         private struct RGBColors
         {
-            public static Color color1 = Color.FromArgb(172, 126, 241);
-            public static Color color2 = Color.FromArgb(249, 118, 176);
-            public static Color color3 = Color.FromArgb(253, 138, 114);
-            public static Color color4 = Color.FromArgb(95, 77, 221);
-            public static Color color5 = Color.FromArgb(249, 88, 155);
+            public static Color color1 = Color.FromArgb(154, 193, 240);
+            public static Color color2 = Color.FromArgb(114, 250, 147);
+            public static Color color3 = Color.FromArgb(160, 229, 72);
+            public static Color color4 = Color.FromArgb(228, 95, 43);
+            public static Color color5 = Color.FromArgb(246, 196, 69);
             public static Color color6 = Color.FromArgb(24, 161, 251);
         }
 
 
         // Methods
-        private void ActivateButton(object senderBtn, Color color)
+        private void ActivateButton(object senderBtn)
         {
             if (senderBtn != null)
             {
                 DisableButton();
                 // Button
                 currentBtn = (IconButton)senderBtn;
-                currentBtn.BackColor = Color.FromArgb(37, 36, 81);
-                currentBtn.ForeColor = color;
+                currentBtn.BackColor = Color.FromArgb(243, 255, 228);
+                currentBtn.ForeColor = RGBColors.color3;
                 currentBtn.TextAlign = ContentAlignment.MiddleCenter;
-                currentBtn.IconColor = color;
+                currentBtn.IconColor = RGBColors.color3;
                 currentBtn.TextImageRelation = TextImageRelation.TextBeforeImage;
                 currentBtn.ImageAlign = ContentAlignment.MiddleRight;
 
                 // Left border button
-                leftBorderBtn.BackColor = color;
+                leftBorderBtn.BackColor = RGBColors.color3;
                 leftBorderBtn.Location = new Point(0, currentBtn.Location.Y);
                 leftBorderBtn.Visible = true;
                 leftBorderBtn.BringToFront();
@@ -75,10 +75,10 @@ namespace Shopping_App
             if (currentBtn != null)
             {
                 // Button
-                currentBtn.BackColor = Color.FromArgb(31, 30, 68);
-                currentBtn.ForeColor = Color.Gainsboro;
+                currentBtn.BackColor = Color.FromArgb(255, 255, 255);
+                currentBtn.ForeColor = Color.Black;
                 currentBtn.TextAlign = ContentAlignment.MiddleLeft;
-                currentBtn.IconColor = Color.Gainsboro;
+                currentBtn.IconColor = Color.Black;
                 currentBtn.TextImageRelation = TextImageRelation.ImageBeforeText;
                 currentBtn.ImageAlign = ContentAlignment.MiddleLeft;
             }
@@ -99,40 +99,39 @@ namespace Shopping_App
             pDesktop.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
-            lbTitleChileForm.Text = childForm.Text;
         }
 
         private void btnDashboard_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender, RGBColors.color1);
-            OpenChildForm(new fDashboard());
+            ActivateButton(sender);
+            OpenChildForm(new fShop());
         }
 
         private void btnOrder_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender, RGBColors.color2);
-            OpenChildForm(new fOrder());
+            ActivateButton(sender);
+            OpenChildForm(new fCart());
         }
 
         private void btnProduct_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender, RGBColors.color3);
-            OpenChildForm(new fProduct());
+            ActivateButton(sender);
+            OpenChildForm(new fBlog());
         }
 
         private void btnCustomer_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender, RGBColors.color4);
-            OpenChildForm(new fCustomer());
+            ActivateButton(sender);
+            OpenChildForm(new fProfile());
         }
         private void btnMarketing_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender, RGBColors.color5);
-            OpenChildForm(new fMarketing());
+            ActivateButton(sender);
+            OpenChildForm(new fContactUs());
         }
         private void btnSetting_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender, RGBColors.color6);
+            ActivateButton(sender);
             OpenChildForm(new fSetting());
         }
         private void btnLogo_Click(object sender, EventArgs e)
@@ -147,7 +146,6 @@ namespace Shopping_App
         {
             DisableButton();
             leftBorderBtn.Visible = false;
-            lbTitleChileForm.Text = "Home";
         }
 
         // Drag Form

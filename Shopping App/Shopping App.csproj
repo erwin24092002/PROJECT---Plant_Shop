@@ -59,35 +59,35 @@
     <Compile Include="fMainMenu.Designer.cs">
       <DependentUpon>fMainMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\fCustomer.cs">
+    <Compile Include="Forms\fProfile.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\fCustomer.Designer.cs">
-      <DependentUpon>fCustomer.cs</DependentUpon>
+    <Compile Include="Forms\fProfile.Designer.cs">
+      <DependentUpon>fProfile.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\fDashboard.cs">
+    <Compile Include="Forms\fShop.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\fDashboard.Designer.cs">
-      <DependentUpon>fDashboard.cs</DependentUpon>
+    <Compile Include="Forms\fShop.Designer.cs">
+      <DependentUpon>fShop.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\fMarketing.cs">
+    <Compile Include="Forms\fContactUs.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\fMarketing.Designer.cs">
-      <DependentUpon>fMarketing.cs</DependentUpon>
+    <Compile Include="Forms\fContactUs.Designer.cs">
+      <DependentUpon>fContactUs.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\fProduct.cs">
+    <Compile Include="Forms\fBlog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\fProduct.Designer.cs">
-      <DependentUpon>fProduct.cs</DependentUpon>
+    <Compile Include="Forms\fBlog.Designer.cs">
+      <DependentUpon>fBlog.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\fOrder.cs">
+    <Compile Include="Forms\fCart.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\fOrder.Designer.cs">
-      <DependentUpon>fOrder.cs</DependentUpon>
+    <Compile Include="Forms\fCart.Designer.cs">
+      <DependentUpon>fCart.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\fSetting.cs">
       <SubType>Form</SubType>
@@ -100,20 +100,20 @@
     <EmbeddedResource Include="fMainMenu.resx">
       <DependentUpon>fMainMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\fCustomer.resx">
-      <DependentUpon>fCustomer.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\fProfile.resx">
+      <DependentUpon>fProfile.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\fDashboard.resx">
-      <DependentUpon>fDashboard.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\fShop.resx">
+      <DependentUpon>fShop.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\fMarketing.resx">
-      <DependentUpon>fMarketing.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\fContactUs.resx">
+      <DependentUpon>fContactUs.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\fOrder.resx">
-      <DependentUpon>fOrder.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\fCart.resx">
+      <DependentUpon>fCart.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\fProduct.resx">
-      <DependentUpon>fProduct.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\fBlog.resx">
+      <DependentUpon>fBlog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\fSetting.resx">
       <DependentUpon>fSetting.cs</DependentUpon>

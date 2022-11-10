@@ -1,6 +1,6 @@
 ﻿namespace Shopping_App.Forms
 {
-    partial class fProduct
+    partial class fProfile
     {
         /// <summary>
         /// Required designer variable.
@@ -30,13 +30,13 @@
         {
             this.SuspendLayout();
             // 
-            // fProduct
+            // fCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(871, 452);
-            this.Name = "fProduct";
-            this.Text = "Product";
+            this.Name = "fCustomer";
+            this.Text = "Customer";
             this.ResumeLayout(false);
 
         }

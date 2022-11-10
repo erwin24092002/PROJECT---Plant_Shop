@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Shopping_App.Forms
 {
-    public partial class fProduct : Form
+    public partial class fCart : Form
     {
-        public fProduct()
+        public fCart()
         {
             InitializeComponent();
         }
