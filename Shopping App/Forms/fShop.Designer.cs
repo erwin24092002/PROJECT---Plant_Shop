@@ -28,13 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.pSelectBar = new System.Windows.Forms.Panel();
             this.SuspendLayout();
+            // 
+            // pSelectBar
+            // 
+            this.pSelectBar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pSelectBar.Location = new System.Drawing.Point(0, 0);
+            this.pSelectBar.Name = "pSelectBar";
+            this.pSelectBar.Size = new System.Drawing.Size(871, 58);
+            this.pSelectBar.TabIndex = 0;
             // 
             // fShop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(871, 484);
+            this.Controls.Add(this.pSelectBar);
             this.Name = "fShop";
             this.Text = "Dashboard";
             this.ResumeLayout(false);
@@ -42,5 +52,7 @@
         }
 
         #endregion
+
+        private System.Windows.Forms.Panel pSelectBar;
     }
 }
