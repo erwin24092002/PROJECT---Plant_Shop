@@ -30,12 +30,12 @@
         {
             this.SuspendLayout();
             // 
-            // fDashboard
+            // fShop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(871, 452);
-            this.Name = "fDashboard";
+            this.ClientSize = new System.Drawing.Size(871, 484);
+            this.Name = "fShop";
             this.Text = "Dashboard";
             this.ResumeLayout(false);
 

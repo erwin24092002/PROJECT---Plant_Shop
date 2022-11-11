@@ -56,7 +56,7 @@
             // 
             // pMenu
             // 
-            this.pMenu.BackColor = System.Drawing.Color.White;
+            this.pMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(78)))));
             this.pMenu.Controls.Add(this.btnSetting);
             this.pMenu.Controls.Add(this.btnContactUs);
             this.pMenu.Controls.Add(this.btnProfile);
@@ -75,10 +75,10 @@
             this.btnSetting.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnSetting.FlatAppearance.BorderSize = 0;
             this.btnSetting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSetting.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSetting.ForeColor = System.Drawing.Color.Black;
+            this.btnSetting.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSetting.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnSetting.IconChar = FontAwesome.Sharp.IconChar.ScrewdriverWrench;
-            this.btnSetting.IconColor = System.Drawing.Color.Black;
+            this.btnSetting.IconColor = System.Drawing.Color.Gainsboro;
             this.btnSetting.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnSetting.IconSize = 32;
             this.btnSetting.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -98,10 +98,10 @@
             this.btnContactUs.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnContactUs.FlatAppearance.BorderSize = 0;
             this.btnContactUs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnContactUs.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnContactUs.ForeColor = System.Drawing.Color.Black;
+            this.btnContactUs.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnContactUs.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnContactUs.IconChar = FontAwesome.Sharp.IconChar.MailBulk;
-            this.btnContactUs.IconColor = System.Drawing.Color.Black;
+            this.btnContactUs.IconColor = System.Drawing.Color.Gainsboro;
             this.btnContactUs.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnContactUs.IconSize = 32;
             this.btnContactUs.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -121,10 +121,10 @@
             this.btnProfile.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnProfile.FlatAppearance.BorderSize = 0;
             this.btnProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProfile.ForeColor = System.Drawing.Color.Black;
+            this.btnProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProfile.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnProfile.IconChar = FontAwesome.Sharp.IconChar.AddressBook;
-            this.btnProfile.IconColor = System.Drawing.Color.Black;
+            this.btnProfile.IconColor = System.Drawing.Color.Gainsboro;
             this.btnProfile.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnProfile.IconSize = 32;
             this.btnProfile.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -144,10 +144,10 @@
             this.btnBlog.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnBlog.FlatAppearance.BorderSize = 0;
             this.btnBlog.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBlog.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBlog.ForeColor = System.Drawing.Color.Black;
+            this.btnBlog.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBlog.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnBlog.IconChar = FontAwesome.Sharp.IconChar.Tag;
-            this.btnBlog.IconColor = System.Drawing.Color.Black;
+            this.btnBlog.IconColor = System.Drawing.Color.Gainsboro;
             this.btnBlog.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnBlog.IconSize = 32;
             this.btnBlog.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -167,10 +167,10 @@
             this.btnCart.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnCart.FlatAppearance.BorderSize = 0;
             this.btnCart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCart.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCart.ForeColor = System.Drawing.Color.Black;
+            this.btnCart.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCart.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnCart.IconChar = FontAwesome.Sharp.IconChar.ShoppingCart;
-            this.btnCart.IconColor = System.Drawing.Color.Black;
+            this.btnCart.IconColor = System.Drawing.Color.Gainsboro;
             this.btnCart.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnCart.IconSize = 32;
             this.btnCart.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -190,10 +190,10 @@
             this.btnShop.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnShop.FlatAppearance.BorderSize = 0;
             this.btnShop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnShop.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnShop.ForeColor = System.Drawing.Color.Black;
+            this.btnShop.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnShop.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnShop.IconChar = FontAwesome.Sharp.IconChar.Store;
-            this.btnShop.IconColor = System.Drawing.Color.Black;
+            this.btnShop.IconColor = System.Drawing.Color.Gainsboro;
             this.btnShop.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnShop.IconSize = 32;
             this.btnShop.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -210,7 +210,7 @@
             // 
             // pLogo
             // 
-            this.pLogo.BackColor = System.Drawing.Color.White;
+            this.pLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(78)))));
             this.pLogo.Controls.Add(this.btnLogo);
             this.pLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.pLogo.Location = new System.Drawing.Point(0, 0);
@@ -231,7 +231,7 @@
             // 
             // pTitleBar
             // 
-            this.pTitleBar.BackColor = System.Drawing.Color.White;
+            this.pTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(78)))));
             this.pTitleBar.Controls.Add(this.icZoomIn);
             this.pTitleBar.Controls.Add(this.icMinimize);
             this.pTitleBar.Controls.Add(this.icZoomOut);
@@ -245,7 +245,7 @@
             // icZoomIn
             // 
             this.icZoomIn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.icZoomIn.BackColor = System.Drawing.Color.White;
+            this.icZoomIn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(78)))));
             this.icZoomIn.ForeColor = System.Drawing.Color.Green;
             this.icZoomIn.IconChar = FontAwesome.Sharp.IconChar.CompressArrowsAlt;
             this.icZoomIn.IconColor = System.Drawing.Color.Green;
@@ -261,7 +261,7 @@
             // icMinimize
             // 
             this.icMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.icMinimize.BackColor = System.Drawing.Color.White;
+            this.icMinimize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(78)))));
             this.icMinimize.ForeColor = System.Drawing.Color.Green;
             this.icMinimize.IconChar = FontAwesome.Sharp.IconChar.WindowMaximize;
             this.icMinimize.IconColor = System.Drawing.Color.Green;
@@ -276,7 +276,7 @@
             // icZoomOut
             // 
             this.icZoomOut.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.icZoomOut.BackColor = System.Drawing.Color.White;
+            this.icZoomOut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(78)))));
             this.icZoomOut.ForeColor = System.Drawing.Color.Green;
             this.icZoomOut.IconChar = FontAwesome.Sharp.IconChar.ExpandArrowsAlt;
             this.icZoomOut.IconColor = System.Drawing.Color.Green;
@@ -291,7 +291,7 @@
             // icExit
             // 
             this.icExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.icExit.BackColor = System.Drawing.Color.White;
+            this.icExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(78)))));
             this.icExit.ForeColor = System.Drawing.Color.Green;
             this.icExit.IconChar = FontAwesome.Sharp.IconChar.Multiply;
             this.icExit.IconColor = System.Drawing.Color.Green;

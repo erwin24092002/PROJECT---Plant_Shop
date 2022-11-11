@@ -75,10 +75,10 @@ namespace Shopping_App
             if (currentBtn != null)
             {
                 // Button
-                currentBtn.BackColor = Color.FromArgb(255, 255, 255);
-                currentBtn.ForeColor = Color.Black;
+                currentBtn.BackColor = Color.FromArgb(51, 51, 78);
+                currentBtn.ForeColor = Color.Gainsboro;
                 currentBtn.TextAlign = ContentAlignment.MiddleLeft;
-                currentBtn.IconColor = Color.Black;
+                currentBtn.IconColor = Color.Gainsboro;
                 currentBtn.TextImageRelation = TextImageRelation.ImageBeforeText;
                 currentBtn.ImageAlign = ContentAlignment.MiddleLeft;
             }
