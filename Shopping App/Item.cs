@@ -13,7 +13,9 @@ namespace Shopping_App
         int size = 256;
         public Item(string id, string nameOfItem, long priceOfItem)
         {
-            this.Size = new Size(size, size + (size / 4));
+
+
+            /*this.Size = new Size(size, size + (size / 4));
             this.BackColor = Color.White;
 
             Bitmap bm1 = (Bitmap)NHACCU.ResourceManager.GetObject(id);
@@ -53,7 +55,7 @@ namespace Shopping_App
 
 
             this.Controls.Add(itemName);
-            this.Controls.Add(pb);
+            this.Controls.Add(pb);*/
         }
     }
 }

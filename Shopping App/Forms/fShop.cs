@@ -15,6 +15,8 @@ namespace Shopping_App.Forms
         public fShop()
         {
             InitializeComponent();
+            MyData data = new MyData();
+            
         }
     }
 }
