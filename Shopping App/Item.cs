@@ -11,10 +11,8 @@ namespace Shopping_App
     internal class Item : Panel
     {
         int size = 256;
-        public Item(string id, string nameOfItem, long priceOfItem)
+        public Item(string id)
         {
-
-
             /*this.Size = new Size(size, size + (size / 4));
             this.BackColor = Color.White;
 
