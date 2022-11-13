@@ -16,7 +16,6 @@ namespace Shopping_App.Forms
         {
             InitializeComponent();
             MyData data = new MyData();
-            
         }
     }
 }

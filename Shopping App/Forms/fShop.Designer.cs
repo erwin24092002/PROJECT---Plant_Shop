@@ -30,9 +30,6 @@
         {
             this.pSelectBar = new System.Windows.Forms.Panel();
             this.flpItems = new System.Windows.Forms.FlowLayoutPanel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.flpItems.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // pSelectBar
@@ -45,22 +42,12 @@
             // 
             // flpItems
             // 
-            this.flpItems.Controls.Add(this.dataGridView1);
+            this.flpItems.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.flpItems.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flpItems.Location = new System.Drawing.Point(0, 58);
             this.flpItems.Name = "flpItems";
             this.flpItems.Size = new System.Drawing.Size(871, 426);
             this.flpItems.TabIndex = 1;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 3);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(868, 334);
-            this.dataGridView1.TabIndex = 0;
             // 
             // fShop
             // 
@@ -71,8 +58,6 @@
             this.Controls.Add(this.pSelectBar);
             this.Name = "fShop";
             this.Text = "Dashboard";
-            this.flpItems.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -81,6 +66,5 @@
 
         private System.Windows.Forms.Panel pSelectBar;
         private System.Windows.Forms.FlowLayoutPanel flpItems;
-        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

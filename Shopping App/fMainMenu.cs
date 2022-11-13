@@ -92,6 +92,7 @@ namespace Shopping_App
                 currentChildForm.Close();
             }
             currentChildForm = childForm;
+            childForm.Size = this.pDesktop.Size;
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
             childForm.Dock = DockStyle.Fill;
