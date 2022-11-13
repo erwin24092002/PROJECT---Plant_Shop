@@ -16,6 +16,13 @@ namespace Shopping_App.Forms
         {
             InitializeComponent();
             MyData data = new MyData();
+            DataRowCollection plants = data.Plants.Rows;
+            for (int id=0; id<plants.Count; id++)
+            {
+                Item plant = new Item(plants[id]);
+                flpItems.Controls.Add(plant);
+            }
+        
         }
     }
 }
