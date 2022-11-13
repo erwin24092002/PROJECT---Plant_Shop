@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Shopping_App.Forms
 {
-    public partial class fItem : Form
+    public partial class fPlant : Form
     {
-        public fItem()
+        public fPlant()
         {
             InitializeComponent();
+        }
+
+        private void icExit_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

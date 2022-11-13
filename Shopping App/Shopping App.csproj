@@ -53,6 +53,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\fPlant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\fPlant.Designer.cs">
+      <DependentUpon>fPlant.cs</DependentUpon>
+    </Compile>
     <Compile Include="MyData.cs" />
     <Compile Include="fMainMenu.cs">
       <SubType>Form</SubType>
@@ -104,6 +110,9 @@
     <EmbeddedResource Include="fMainMenu.resx">
       <DependentUpon>fMainMenu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\fPlant.resx">
+      <DependentUpon>fPlant.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\fProfile.resx">
       <DependentUpon>fProfile.cs</DependentUpon>
     </EmbeddedResource>
@@ -149,6 +158,8 @@
   <ItemGroup>
     <None Include="Resources\nobd_logo.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\nobg_final_logo.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

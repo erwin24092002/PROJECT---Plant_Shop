@@ -37,7 +37,7 @@
             this.pSelectBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.pSelectBar.Location = new System.Drawing.Point(0, 0);
             this.pSelectBar.Name = "pSelectBar";
-            this.pSelectBar.Size = new System.Drawing.Size(871, 58);
+            this.pSelectBar.Size = new System.Drawing.Size(871, 89);
             this.pSelectBar.TabIndex = 0;
             // 
             // flpItems
@@ -45,9 +45,9 @@
             this.flpItems.AutoScroll = true;
             this.flpItems.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.flpItems.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flpItems.Location = new System.Drawing.Point(0, 58);
+            this.flpItems.Location = new System.Drawing.Point(0, 89);
             this.flpItems.Name = "flpItems";
-            this.flpItems.Size = new System.Drawing.Size(871, 426);
+            this.flpItems.Size = new System.Drawing.Size(871, 395);
             this.flpItems.TabIndex = 1;
             // 
             // fShop
