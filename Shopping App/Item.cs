@@ -13,47 +13,46 @@ namespace Shopping_App
         int size = 256;
         public Item(string id)
         {
-            /*this.Size = new Size(size, size + (size / 4));
+            this.Size = new Size(size, size + (size / 4));
             this.BackColor = Color.White;
 
-            Bitmap bm1 = (Bitmap)NHACCU.ResourceManager.GetObject(id);
+            /*Bitmap bm1 = (Bitmap)NHACCU.ResourceManager.GetObject(id);*/
 
-            PictureBox pb = new PictureBox();
-            pb.Size = new Size(size, size);
-            pb.BackgroundImage = bm1;
-            pb.BackgroundImageLayout = ImageLayout.Stretch;
+            PictureBox ptb = new PictureBox();
+            ptb.Size = new Size(size, size);
+            /*ptb.BackgroundImage = bm1;*/
+            ptb.BackgroundImageLayout = ImageLayout.Stretch;
 
-            Panel itemName = new Panel();
-            itemName.Size = new Size(size, size / 4);
-            itemName.Location = new Point(0, size);
-            itemName.BackColor = Color.DimGray;
+            Panel pItemInfo = new Panel();
+            pItemInfo.Size = new Size(size, size / 4);
+            pItemInfo.Location = new Point(0, size);
+            pItemInfo.BackColor = Color.DimGray;
 
-            Button bt = new Button();
-            bt.Text = "Xem thêm";
-            bt.Size = new Size(size / 4, size / 8);
-            bt.Location = new Point(size / 2 + size / 4 - size / 16, size / 8 - size / 16);
-            bt.BackColor = Color.LightGray;
-            itemName.Controls.Add(bt);
+            Button btnInfo = new Button();
+            btnInfo.Text = "Xem thêm";
+            btnInfo.Size = new Size(size / 4, size / 8);
+            btnInfo.Location = new Point(size / 2 + size / 4 - size / 16, size / 8 - size / 16);
+            btnInfo.BackColor = Color.LightGray;
+            pItemInfo.Controls.Add(btnInfo);
 
-            Label name = new Label();
-            name.Text = nameOfItem;
-            name.Location = new Point(0, 8);
-            name.Font = new Font("Arial", 10, FontStyle.Bold);
-            name.Size = new Size(size / 2 + size / 16, size / 8 - size / 16);
-            name.ForeColor = Color.LightGray;
-            itemName.Controls.Add(name);
+            Label lbItemName = new Label();
+            /*name.Text = nameOfItem;*/
+            lbItemName.Location = new Point(0, 8);
+            lbItemName.Font = new Font("Arial", 10, FontStyle.Bold);
+            lbItemName.Size = new Size(size / 2 + size / 16, size / 8 - size / 16);
+            lbItemName.ForeColor = Color.LightGray;
+            pItemInfo.Controls.Add(lbItemName);
 
-            Label price = new Label();
-            price.Text = priceOfItem.ToString("N0") + " VND";
-            price.Location = new Point(0, size / 8);
-            price.Font = new Font("Arial", 12, FontStyle.Bold);
-            price.Size = new Size(size / 2 + size / 16, size / 8);
-            price.ForeColor = Color.White;
-            itemName.Controls.Add(price);
+            Label lbItemPrice = new Label();
+            /*lbItemPrice.Text = priceOfItem.ToString("N0") + " VND";*/
+            lbItemPrice.Location = new Point(0, size / 8);
+            lbItemPrice.Font = new Font("Arial", 12, FontStyle.Bold);
+            lbItemPrice.Size = new Size(size / 2 + size / 16, size / 8);
+            lbItemPrice.ForeColor = Color.White;
+            pItemInfo.Controls.Add(lbItemPrice);
 
-
-            this.Controls.Add(itemName);
-            this.Controls.Add(pb);*/
+            this.Controls.Add(pItemInfo);
+            this.Controls.Add(ptb);
         }
     }
 }
