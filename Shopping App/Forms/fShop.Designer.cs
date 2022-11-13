@@ -42,6 +42,7 @@
             // 
             // flpItems
             // 
+            this.flpItems.AutoScroll = true;
             this.flpItems.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.flpItems.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flpItems.Location = new System.Drawing.Point(0, 58);

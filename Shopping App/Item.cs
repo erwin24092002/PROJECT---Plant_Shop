@@ -16,6 +16,7 @@ namespace Shopping_App
         {
             this.Size = new Size(size, size + (size / 4));
             this.BackColor = Color.White;
+            this.Margin = new Padding(size/20, size/20, size/20, size/20);
 
             PictureBox ptb = new PictureBox();
             ptb.Size = new Size(size, size);
