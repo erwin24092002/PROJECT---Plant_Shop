@@ -29,10 +29,12 @@
         private void InitializeComponent()
         {
             this.flpCart = new System.Windows.Forms.FlowLayoutPanel();
+            this.pControl = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // flpCart
             // 
+            this.flpCart.AutoScroll = true;
             this.flpCart.BackColor = System.Drawing.Color.Silver;
             this.flpCart.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flpCart.Location = new System.Drawing.Point(0, 0);
@@ -40,11 +42,20 @@
             this.flpCart.Size = new System.Drawing.Size(1107, 668);
             this.flpCart.TabIndex = 0;
             // 
+            // pControl
+            // 
+            this.pControl.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pControl.Location = new System.Drawing.Point(0, 509);
+            this.pControl.Name = "pControl";
+            this.pControl.Size = new System.Drawing.Size(1107, 159);
+            this.pControl.TabIndex = 1;
+            // 
             // fCart
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1107, 668);
+            this.Controls.Add(this.pControl);
             this.Controls.Add(this.flpCart);
             this.Name = "fCart";
             this.Text = "Cart";
@@ -55,5 +66,6 @@
         #endregion
 
         private System.Windows.Forms.FlowLayoutPanel flpCart;
+        private System.Windows.Forms.Panel pControl;
     }
 }

@@ -15,6 +15,18 @@ namespace Shopping_App.Forms
         public fCart()
         {
             InitializeComponent();
+            Render();
+        }
+
+        private void Render()
+        {
+            MyData data = new MyData();
+            DataRowCollection plants = data.Plants.Rows;
+            for (int id = 0; id < plants.Count; id++)
+            {
+                CartItem item = new CartItem(plants[id]["id"].ToString(), id);
+                flpCart.Controls.Add(item);
+            }
         }
     }
 }

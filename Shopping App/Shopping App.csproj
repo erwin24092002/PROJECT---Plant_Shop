@@ -53,6 +53,9 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CartItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Forms\fPlant.cs">
       <SubType>Form</SubType>
     </Compile>
