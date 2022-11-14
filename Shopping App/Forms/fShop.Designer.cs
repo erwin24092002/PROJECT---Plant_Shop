@@ -30,6 +30,7 @@
         {
             this.pSelectBar = new System.Windows.Forms.Panel();
             this.flpItems = new System.Windows.Forms.FlowLayoutPanel();
+            this.pPlantInfor = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // pSelectBar
@@ -50,15 +51,24 @@
             this.flpItems.Size = new System.Drawing.Size(871, 395);
             this.flpItems.TabIndex = 1;
             // 
+            // pPlantInfor
+            // 
+            this.pPlantInfor.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pPlantInfor.Location = new System.Drawing.Point(870, 89);
+            this.pPlantInfor.Name = "pPlantInfor";
+            this.pPlantInfor.Size = new System.Drawing.Size(1, 395);
+            this.pPlantInfor.TabIndex = 2;
+            // 
             // fShop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(871, 484);
+            this.Controls.Add(this.pPlantInfor);
             this.Controls.Add(this.flpItems);
             this.Controls.Add(this.pSelectBar);
             this.Name = "fShop";
-            this.Text = "Dashboard";
+            this.Text = "Shop";
             this.ResumeLayout(false);
 
         }
@@ -67,5 +77,6 @@
 
         private System.Windows.Forms.Panel pSelectBar;
         private System.Windows.Forms.FlowLayoutPanel flpItems;
+        private System.Windows.Forms.Panel pPlantInfor;
     }
 }

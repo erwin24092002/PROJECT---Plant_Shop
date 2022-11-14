@@ -105,6 +105,11 @@
     <Compile Include="Item.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Plants.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Plants.resx</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="fMainMenu.resx">
@@ -130,6 +135,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\fSetting.resx">
       <DependentUpon>fSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Plants.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Plants.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -160,6 +169,99 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\nobg_final_logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Alocasia Rugosa.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Aloe Barbadensis Mill.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Begonia Bowerae.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Begonia Brevirimosa Subsp.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Begonia Rex.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Calathea.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chlorophytum Comosum.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cryptanthus.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dracaena Fragans.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dracaena.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fatsia Japonica.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ficus Elastica.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fittonia Albivenis.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Maranta.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Microsorum Diversifolium.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Monstera Adansonii.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nematanthus.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nepenthes.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Peperomia Caperata.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Peperomia.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Philodendron Micans.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Philodendron.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sansevieria Cylindrica.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Scindapsus Pictus.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Zamioculcas Zamiifolia.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Aeschynanthus Radicans.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Aeschynanthus.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Alocasia Azlanii.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Alocasia Hybrid.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Alocasia Infernalis.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Alocasia Reginula.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
