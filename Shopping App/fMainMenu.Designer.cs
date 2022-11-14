@@ -44,19 +44,22 @@
             this.btnCart = new FontAwesome.Sharp.IconButton();
             this.btnShop = new FontAwesome.Sharp.IconButton();
             this.btnLogo = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pMenu.SuspendLayout();
             this.pLogo.SuspendLayout();
             this.pTitleBar.SuspendLayout();
+            this.pDesktop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.icZoomIn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.icMinimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.icZoomOut)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.icExit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnLogo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pMenu
             // 
-            this.pMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(78)))));
+            this.pMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(70)))));
             this.pMenu.Controls.Add(this.btnSetting);
             this.pMenu.Controls.Add(this.btnContactUs);
             this.pMenu.Controls.Add(this.btnProfile);
@@ -95,7 +98,8 @@
             // 
             // pDesktop
             // 
-            this.pDesktop.BackColor = System.Drawing.Color.White;
+            this.pDesktop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(85)))));
+            this.pDesktop.Controls.Add(this.pictureBox1);
             this.pDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pDesktop.Location = new System.Drawing.Point(207, 38);
             this.pDesktop.Name = "pDesktop";
@@ -314,6 +318,17 @@
             this.btnLogo.TabStop = false;
             this.btnLogo.Click += new System.EventHandler(this.btnLogo_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pictureBox1.Image = global::Shopping_App.Properties.Resources.nobg_final_logo;
+            this.pictureBox1.Location = new System.Drawing.Point(123, 74);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(882, 528);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
             // fMainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -329,11 +344,13 @@
             this.pMenu.ResumeLayout(false);
             this.pLogo.ResumeLayout(false);
             this.pTitleBar.ResumeLayout(false);
+            this.pDesktop.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.icZoomIn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.icMinimize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.icZoomOut)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.icExit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnLogo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -355,6 +372,7 @@
         private FontAwesome.Sharp.IconPictureBox icExit;
         private FontAwesome.Sharp.IconPictureBox icZoomIn;
         private System.Windows.Forms.PictureBox btnLogo;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

@@ -15,7 +15,7 @@ namespace Shopping_App.Forms
 {
     public partial class fPlant : Form
     {
-        private float price;
+        private DataRow plant;
         public fPlant(string id)
         {
             InitializeComponent();
@@ -24,15 +24,14 @@ namespace Shopping_App.Forms
             this.DoubleBuffered = true;
 
             MyData data = new MyData();
-            DataRow plant = data.Plants.Select("id=" + id)[0];
+            plant = data.Plants.Select("id=" + id)[0];
 
             ResourceManager PlantManager = new ResourceManager("Shopping_App.Plants", Assembly.GetExecutingAssembly());
             this.ptbPlant.BackgroundImage = (Image)PlantManager.GetObject(string.Join("_", plant["name"].ToString().Split(' ')));
             this.ptbPlant.BackgroundImageLayout = ImageLayout.Stretch;
 
             this.lbPlantName.Text = plant["name"].ToString();
-            price = float.Parse(plant["price"].ToString());
-            this.txbTotalPrice.Text = "$" + ( price * (float)this.nmQuantity.Value).ToString();
+            this.txbTotalPrice.Text = "$" + (float.Parse(plant["price"].ToString()) * (float)this.nmQuantity.Value).ToString();
         }
 
         private void icExit_Click(object sender, EventArgs e)
@@ -42,7 +41,7 @@ namespace Shopping_App.Forms
 
         private void nmQuantity_ValueChanged(object sender, EventArgs e)
         {
-            this.txbTotalPrice.Text = "$" + (price * (float)this.nmQuantity.Value).ToString();
+            this.txbTotalPrice.Text = "$" + (float.Parse(plant["price"].ToString()) * (float)this.nmQuantity.Value).ToString();
         }
 
         private void icExit_MouseHover(object sender, EventArgs e)
@@ -53,6 +52,32 @@ namespace Shopping_App.Forms
         private void icExit_MouseLeave(object sender, EventArgs e)
         {
             ((IconPictureBox)sender).ForeColor = Color.Gainsboro;
+        }
+
+        private void Show_Description()
+        {
+            RichTextBox rtbDescription = new RichTextBox();
+            int w = pPlantContent.Width - pPlantContent.Width / 10;
+            int h = pPlantContent.Height - pPlantContent.Height / 10;
+            int x = pPlantContent.Width / 20;
+            int y = 10;
+            rtbDescription.Size = new Size(w, h);
+            rtbDescription.Location = new Point(x, y);
+            rtbDescription.BorderStyle = BorderStyle.None;
+            rtbDescription.Font = new Font("Arial", 15, FontStyle.Regular);
+            rtbDescription.ForeColor = Color.Gainsboro;
+            rtbDescription.Text = plant["descript"].ToString();
+            this.pPlantContent.Controls.Add(rtbDescription);
+        }
+
+        private void btnDescription_Click(object sender, EventArgs e)
+        {
+            Show_Description();
+        }
+
+        private void btnReview_Click(object sender, EventArgs e)
+        {
+            this.pPlantContent.Controls.Clear();
         }
     }
 }

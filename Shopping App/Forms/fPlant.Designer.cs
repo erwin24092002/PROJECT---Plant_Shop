@@ -39,12 +39,12 @@
             this.btnDescription = new FontAwesome.Sharp.IconButton();
             this.pPlantContent = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txbTotalPrice = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.nmQuantity = new System.Windows.Forms.NumericUpDown();
             this.lbQuantity = new System.Windows.Forms.Label();
             this.btnBuy = new FontAwesome.Sharp.IconButton();
             this.btnCart = new FontAwesome.Sharp.IconButton();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txbTotalPrice = new System.Windows.Forms.TextBox();
             this.pControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.icExit)).BeginInit();
             this.pPlantPicture.SuspendLayout();
@@ -135,7 +135,7 @@
             this.btnReview.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnReview.FlatAppearance.BorderSize = 0;
             this.btnReview.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReview.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReview.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReview.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnReview.IconChar = FontAwesome.Sharp.IconChar.Store;
             this.btnReview.IconColor = System.Drawing.Color.Gainsboro;
@@ -145,39 +145,41 @@
             this.btnReview.Location = new System.Drawing.Point(243, 3);
             this.btnReview.Name = "btnReview";
             this.btnReview.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btnReview.Size = new System.Drawing.Size(173, 39);
+            this.btnReview.Size = new System.Drawing.Size(184, 39);
             this.btnReview.TabIndex = 3;
             this.btnReview.Text = "Review";
             this.btnReview.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnReview.UseVisualStyleBackColor = true;
+            this.btnReview.Click += new System.EventHandler(this.btnReview_Click);
             // 
             // btnDescription
             // 
             this.btnDescription.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnDescription.FlatAppearance.BorderSize = 0;
             this.btnDescription.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDescription.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnDescription.IconChar = FontAwesome.Sharp.IconChar.Store;
             this.btnDescription.IconColor = System.Drawing.Color.Gainsboro;
             this.btnDescription.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnDescription.IconSize = 32;
             this.btnDescription.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDescription.Location = new System.Drawing.Point(45, 3);
+            this.btnDescription.Location = new System.Drawing.Point(35, 3);
             this.btnDescription.Name = "btnDescription";
             this.btnDescription.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btnDescription.Size = new System.Drawing.Size(175, 39);
+            this.btnDescription.Size = new System.Drawing.Size(182, 39);
             this.btnDescription.TabIndex = 2;
             this.btnDescription.Text = "Description";
             this.btnDescription.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnDescription.UseVisualStyleBackColor = true;
+            this.btnDescription.Click += new System.EventHandler(this.btnDescription_Click);
             // 
             // pPlantContent
             // 
             this.pPlantContent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pPlantContent.Location = new System.Drawing.Point(0, 325);
             this.pPlantContent.Name = "pPlantContent";
-            this.pPlantContent.Size = new System.Drawing.Size(461, 336);
+            this.pPlantContent.Size = new System.Drawing.Size(461, 378);
             this.pPlantContent.TabIndex = 4;
             // 
             // panel1
@@ -189,23 +191,44 @@
             this.panel1.Controls.Add(this.btnBuy);
             this.panel1.Controls.Add(this.btnCart);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 577);
+            this.panel1.Location = new System.Drawing.Point(0, 619);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(461, 84);
             this.panel1.TabIndex = 5;
             // 
+            // txbTotalPrice
+            // 
+            this.txbTotalPrice.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txbTotalPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbTotalPrice.Location = new System.Drawing.Point(298, 9);
+            this.txbTotalPrice.Name = "txbTotalPrice";
+            this.txbTotalPrice.ReadOnly = true;
+            this.txbTotalPrice.Size = new System.Drawing.Size(115, 30);
+            this.txbTotalPrice.TabIndex = 10;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(239, 11);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(62, 25);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Price:";
+            // 
             // nmQuantity
             // 
             this.nmQuantity.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.nmQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nmQuantity.Location = new System.Drawing.Point(119, 9);
+            this.nmQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nmQuantity.Location = new System.Drawing.Point(119, 10);
             this.nmQuantity.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             0});
             this.nmQuantity.Name = "nmQuantity";
-            this.nmQuantity.Size = new System.Drawing.Size(62, 28);
+            this.nmQuantity.Size = new System.Drawing.Size(62, 30);
             this.nmQuantity.TabIndex = 8;
             this.nmQuantity.Value = new decimal(new int[] {
             1,
@@ -218,10 +241,10 @@
             // 
             this.lbQuantity.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbQuantity.AutoSize = true;
-            this.lbQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbQuantity.Location = new System.Drawing.Point(31, 11);
             this.lbQuantity.Name = "lbQuantity";
-            this.lbQuantity.Size = new System.Drawing.Size(82, 22);
+            this.lbQuantity.Size = new System.Drawing.Size(91, 25);
             this.lbQuantity.TabIndex = 7;
             this.lbQuantity.Text = "Quantity:";
             // 
@@ -230,7 +253,7 @@
             this.btnBuy.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnBuy.FlatAppearance.BorderSize = 0;
             this.btnBuy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuy.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuy.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuy.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnBuy.IconChar = FontAwesome.Sharp.IconChar.Store;
             this.btnBuy.IconColor = System.Drawing.Color.Gainsboro;
@@ -251,7 +274,7 @@
             this.btnCart.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnCart.FlatAppearance.BorderSize = 0;
             this.btnCart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCart.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCart.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnCart.IconChar = FontAwesome.Sharp.IconChar.Store;
             this.btnCart.IconColor = System.Drawing.Color.Gainsboro;
@@ -261,38 +284,17 @@
             this.btnCart.Location = new System.Drawing.Point(35, 42);
             this.btnCart.Name = "btnCart";
             this.btnCart.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btnCart.Size = new System.Drawing.Size(175, 37);
+            this.btnCart.Size = new System.Drawing.Size(182, 37);
             this.btnCart.TabIndex = 4;
             this.btnCart.Text = "Add to Cart";
             this.btnCart.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCart.UseVisualStyleBackColor = true;
             // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(239, 12);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(56, 22);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "Price:";
-            // 
-            // txbTotalPrice
-            // 
-            this.txbTotalPrice.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txbTotalPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbTotalPrice.Location = new System.Drawing.Point(301, 9);
-            this.txbTotalPrice.Name = "txbTotalPrice";
-            this.txbTotalPrice.ReadOnly = true;
-            this.txbTotalPrice.Size = new System.Drawing.Size(115, 28);
-            this.txbTotalPrice.TabIndex = 10;
-            // 
             // fPlant
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(461, 661);
+            this.ClientSize = new System.Drawing.Size(461, 703);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pPlantContent);
             this.Controls.Add(this.pControl2);
