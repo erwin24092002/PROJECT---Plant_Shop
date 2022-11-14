@@ -79,6 +79,8 @@
             this.icExit.TabIndex = 3;
             this.icExit.TabStop = false;
             this.icExit.Click += new System.EventHandler(this.icExit_Click);
+            this.icExit.MouseLeave += new System.EventHandler(this.icExit_MouseLeave);
+            this.icExit.MouseHover += new System.EventHandler(this.icExit_MouseHover);
             // 
             // pPlantPicture
             // 
@@ -210,6 +212,7 @@
             0,
             0,
             0});
+            this.nmQuantity.ValueChanged += new System.EventHandler(this.nmQuantity_ValueChanged);
             // 
             // lbQuantity
             // 
@@ -281,6 +284,7 @@
             this.txbTotalPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbTotalPrice.Location = new System.Drawing.Point(301, 9);
             this.txbTotalPrice.Name = "txbTotalPrice";
+            this.txbTotalPrice.ReadOnly = true;
             this.txbTotalPrice.Size = new System.Drawing.Size(115, 28);
             this.txbTotalPrice.TabIndex = 10;
             // 

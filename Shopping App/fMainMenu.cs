@@ -184,5 +184,15 @@ namespace Shopping_App
             icZoomIn.Visible = false;
             icZoomOut.Visible = true;
         }
+
+        private void icExit_MouseHover(object sender, EventArgs e)
+        {
+            ((IconPictureBox)sender).ForeColor = Color.Red;
+        }
+
+        private void icExit_MouseLeave(object sender, EventArgs e)
+        {
+            ((IconPictureBox)sender).ForeColor = Color.Gainsboro;
+        }
     }
 }

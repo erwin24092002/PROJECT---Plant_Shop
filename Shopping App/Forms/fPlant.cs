@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FontAwesome.Sharp;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,6 +15,7 @@ namespace Shopping_App.Forms
 {
     public partial class fPlant : Form
     {
+        private float price;
         public fPlant(string id)
         {
             InitializeComponent();
@@ -29,12 +31,28 @@ namespace Shopping_App.Forms
             this.ptbPlant.BackgroundImageLayout = ImageLayout.Stretch;
 
             this.lbPlantName.Text = plant["name"].ToString();
-            this.txbTotalPrice.Text = "$" + (float.Parse(plant["price"].ToString()) * (float)this.nmQuantity.Value).ToString();
+            price = float.Parse(plant["price"].ToString());
+            this.txbTotalPrice.Text = "$" + ( price * (float)this.nmQuantity.Value).ToString();
         }
 
         private void icExit_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void nmQuantity_ValueChanged(object sender, EventArgs e)
+        {
+            this.txbTotalPrice.Text = "$" + (price * (float)this.nmQuantity.Value).ToString();
+        }
+
+        private void icExit_MouseHover(object sender, EventArgs e)
+        {
+            ((IconPictureBox)sender).ForeColor = Color.Red;
+        }
+
+        private void icExit_MouseLeave(object sender, EventArgs e)
+        {
+            ((IconPictureBox)sender).ForeColor = Color.Gainsboro;
         }
     }
 }
