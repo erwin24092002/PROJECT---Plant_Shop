@@ -142,7 +142,7 @@
             this.btnReview.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnReview.IconSize = 32;
             this.btnReview.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReview.Location = new System.Drawing.Point(243, 3);
+            this.btnReview.Location = new System.Drawing.Point(242, 3);
             this.btnReview.Name = "btnReview";
             this.btnReview.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnReview.Size = new System.Drawing.Size(184, 39);
@@ -164,7 +164,7 @@
             this.btnDescription.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnDescription.IconSize = 32;
             this.btnDescription.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDescription.Location = new System.Drawing.Point(35, 3);
+            this.btnDescription.Location = new System.Drawing.Point(34, 3);
             this.btnDescription.Name = "btnDescription";
             this.btnDescription.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnDescription.Size = new System.Drawing.Size(182, 39);
@@ -260,7 +260,7 @@
             this.btnBuy.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnBuy.IconSize = 32;
             this.btnBuy.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuy.Location = new System.Drawing.Point(243, 42);
+            this.btnBuy.Location = new System.Drawing.Point(242, 42);
             this.btnBuy.Name = "btnBuy";
             this.btnBuy.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnBuy.Size = new System.Drawing.Size(184, 37);
@@ -281,7 +281,7 @@
             this.btnCart.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnCart.IconSize = 32;
             this.btnCart.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCart.Location = new System.Drawing.Point(35, 42);
+            this.btnCart.Location = new System.Drawing.Point(34, 42);
             this.btnCart.Name = "btnCart";
             this.btnCart.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnCart.Size = new System.Drawing.Size(182, 37);
