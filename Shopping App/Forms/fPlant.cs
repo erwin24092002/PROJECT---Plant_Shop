@@ -32,6 +32,7 @@ namespace Shopping_App.Forms
 
             this.lbPlantName.Text = plant["name"].ToString();
             this.txbTotalPrice.Text = "$" + (float.Parse(plant["price"].ToString()) * (float)this.nmQuantity.Value).ToString();
+            Show_Description();
         }
 
         private void icExit_Click(object sender, EventArgs e)
@@ -66,7 +67,7 @@ namespace Shopping_App.Forms
             rtbDescription.BorderStyle = BorderStyle.None;
             rtbDescription.Font = new Font("Arial", 15, FontStyle.Regular);
             rtbDescription.ForeColor = Color.Gainsboro;
-            rtbDescription.Text = plant["descript"].ToString();
+            rtbDescription.Text = "Common Name: " + plant["common name"].ToString() + "\n" + plant["descript"].ToString();
             this.pPlantContent.Controls.Add(rtbDescription);
         }
 

@@ -26,9 +26,25 @@ namespace Shopping_App.Forms
             DataRowCollection plants = data.Plants.Rows;
             for (int id = 0; id < plants.Count; id++)
             {
+                if (!cbSmall.Checked && plants[id]["size"].ToString() == "s")
+                    continue;
+                if (!cbMediumSize.Checked && plants[id]["size"].ToString() == "m")
+                    continue;
+                if (!cbLarge.Checked && plants[id]["size"].ToString() == "l")
+                    continue;
+                if (!cbCheap.Checked && float.Parse(plants[id]["price"].ToString()) < 20)
+                    continue;
+                if (!cbExpensive.Checked && float.Parse(plants[id]["price"].ToString()) >= 20)
+                    continue;
                 Item item = new Item(plants[id]);
                 flpItems.Controls.Add(item);
             }
+        }
+
+        private void Checkbox_Click(object sender, EventArgs e)
+        {
+            flpItems.Controls.Clear();
+            Render();
         }
     }
 }
