@@ -41,7 +41,7 @@
             this.cbMediumSize = new System.Windows.Forms.CheckBox();
             this.cbSmall = new System.Windows.Forms.CheckBox();
             this.btnSearch = new FontAwesome.Sharp.IconButton();
-            this.tbSearch = new System.Windows.Forms.TextBox();
+            this.txbSearch = new System.Windows.Forms.TextBox();
             this.flpItems = new System.Windows.Forms.FlowLayoutPanel();
             this.pPlantInfor = new System.Windows.Forms.Panel();
             this.pSelectBar.SuspendLayout();
@@ -56,7 +56,7 @@
             this.pSelectBar.Controls.Add(this.groupBox1);
             this.pSelectBar.Controls.Add(this.gbSize);
             this.pSelectBar.Controls.Add(this.btnSearch);
-            this.pSelectBar.Controls.Add(this.tbSearch);
+            this.pSelectBar.Controls.Add(this.txbSearch);
             this.pSelectBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.pSelectBar.Location = new System.Drawing.Point(0, 0);
             this.pSelectBar.Name = "pSelectBar";
@@ -243,14 +243,14 @@
             this.btnSearch.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSearch.UseVisualStyleBackColor = true;
             // 
-            // tbSearch
+            // txbSearch
             // 
-            this.tbSearch.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.tbSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbSearch.Location = new System.Drawing.Point(314, 7);
-            this.tbSearch.Name = "tbSearch";
-            this.tbSearch.Size = new System.Drawing.Size(415, 41);
-            this.tbSearch.TabIndex = 0;
+            this.txbSearch.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txbSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbSearch.Location = new System.Drawing.Point(314, 7);
+            this.txbSearch.Name = "txbSearch";
+            this.txbSearch.Size = new System.Drawing.Size(415, 41);
+            this.txbSearch.TabIndex = 0;
             // 
             // flpItems
             // 
@@ -297,7 +297,7 @@
         private System.Windows.Forms.Panel pSelectBar;
         private System.Windows.Forms.FlowLayoutPanel flpItems;
         private System.Windows.Forms.Panel pPlantInfor;
-        private System.Windows.Forms.TextBox tbSearch;
+        private System.Windows.Forms.TextBox txbSearch;
         private FontAwesome.Sharp.IconButton btnSearch;
         private System.Windows.Forms.GroupBox gbSize;
         private System.Windows.Forms.GroupBox groupBox1;

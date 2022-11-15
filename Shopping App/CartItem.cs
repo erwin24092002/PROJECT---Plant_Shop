@@ -17,7 +17,7 @@ namespace Shopping_App
     {
         private DataRow plant;
         private int quantity;
-        private int w = 840;
+        private int w = 800;
         private int h = 100;
         public CartItem(string id, int q)
         {
@@ -30,8 +30,8 @@ namespace Shopping_App
             this.Margin = new Padding(10, 10, 10, 10);
 
             PictureBox ptb = new PictureBox();
-            ptb.Size = new Size(160, 160);
-            ptb.Location = new Point(20, 20);
+            ptb.Size = new Size(90, 90);
+            ptb.Location = new Point(5, 5);
             ResourceManager Plant = new ResourceManager("Shopping_App.Plants", Assembly.GetExecutingAssembly());
             ptb.BackgroundImage = (Image)Plant.GetObject(string.Join("_", plant["name"].ToString().Split(' ')));
             ptb.BackgroundImageLayout = ImageLayout.Stretch;
@@ -39,13 +39,31 @@ namespace Shopping_App
             Label lbItemName = new Label();
             lbItemName.Text = plant["name"].ToString();
             lbItemName.TextAlign = ContentAlignment.MiddleCenter;
-            lbItemName.Location = new Point(200, 20);
+            lbItemName.Location = new Point(110, 10);
             lbItemName.Font = new Font("Arial", 15, FontStyle.Bold);
             lbItemName.AutoSize = true;
             lbItemName.ForeColor = Color.LightGray;
 
+            Label lbItemQuantity = new Label();
+            lbItemQuantity.Text = "Quantity: " + quantity.ToString();
+            lbItemQuantity.TextAlign = ContentAlignment.MiddleCenter;
+            lbItemQuantity.Location = new Point(110, 42);
+            lbItemQuantity.Font = new Font("Arial", 11, FontStyle.Bold);
+            lbItemQuantity.AutoSize = true;
+            lbItemQuantity.ForeColor = Color.LightGray;
+
+            Label lbItemPrice = new Label();
+            lbItemPrice.Text = "Cost: $" + (float.Parse(plant["price"].ToString()) * quantity).ToString();
+            lbItemPrice.TextAlign = ContentAlignment.MiddleCenter;
+            lbItemPrice.Location = new Point(110, 68);
+            lbItemPrice.Font = new Font("Arial", 11, FontStyle.Bold);
+            lbItemPrice.AutoSize = true;
+            lbItemPrice.ForeColor = Color.LightGray;
+
             this.Controls.Add(ptb);
             this.Controls.Add(lbItemName);
+            this.Controls.Add(lbItemQuantity);
+            this.Controls.Add(lbItemPrice);
         }
     }
 }
