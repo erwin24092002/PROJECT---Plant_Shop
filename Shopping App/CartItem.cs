@@ -1,4 +1,5 @@
-﻿using Shopping_App.Forms;
+﻿using FontAwesome.Sharp;
+using Shopping_App.Forms;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -19,6 +20,14 @@ namespace Shopping_App
         private int quantity;
         private int w = 800;
         private int h = 100;
+        private bool chosed = false;
+        PictureBox ptb = new PictureBox();
+        Label lbItemName = new Label();
+        Label lbItemQuantity = new Label();
+        Label lbItemPrice = new Label();
+        IconPictureBox icpbCheck = new IconPictureBox();
+        IconPictureBox icpbRemove = new IconPictureBox();
+
         public CartItem(string id, int q)
         {
             MyData data = new MyData();
@@ -29,14 +38,12 @@ namespace Shopping_App
             this.BackColor = Color.White;
             this.Margin = new Padding(10, 10, 10, 10);
 
-            PictureBox ptb = new PictureBox();
             ptb.Size = new Size(90, 90);
             ptb.Location = new Point(5, 5);
             ResourceManager Plant = new ResourceManager("Shopping_App.Plants", Assembly.GetExecutingAssembly());
             ptb.BackgroundImage = (Image)Plant.GetObject(string.Join("_", plant["name"].ToString().Split(' ')));
             ptb.BackgroundImageLayout = ImageLayout.Stretch;
 
-            Label lbItemName = new Label();
             lbItemName.Text = plant["name"].ToString();
             lbItemName.TextAlign = ContentAlignment.MiddleCenter;
             lbItemName.Location = new Point(110, 10);
@@ -44,7 +51,6 @@ namespace Shopping_App
             lbItemName.AutoSize = true;
             lbItemName.ForeColor = Color.LightGray;
 
-            Label lbItemQuantity = new Label();
             lbItemQuantity.Text = "Quantity: " + quantity.ToString();
             lbItemQuantity.TextAlign = ContentAlignment.MiddleCenter;
             lbItemQuantity.Location = new Point(110, 42);
@@ -52,7 +58,6 @@ namespace Shopping_App
             lbItemQuantity.AutoSize = true;
             lbItemQuantity.ForeColor = Color.LightGray;
 
-            Label lbItemPrice = new Label();
             lbItemPrice.Text = "Cost: $" + (float.Parse(plant["price"].ToString()) * quantity).ToString();
             lbItemPrice.TextAlign = ContentAlignment.MiddleCenter;
             lbItemPrice.Location = new Point(110, 68);
@@ -60,10 +65,43 @@ namespace Shopping_App
             lbItemPrice.AutoSize = true;
             lbItemPrice.ForeColor = Color.LightGray;
 
+            icpbCheck.Size = new Size(50, 50);
+            icpbCheck.Location = new Point(680, 30);
+            icpbCheck.IconChar = IconChar.Square;
+            icpbCheck.ForeColor = Color.FromArgb(0, 177, 64);
+            icpbCheck.Click += Check_Click;
+
+            icpbRemove.Size = new Size(50, 50);
+            icpbRemove.Location = new Point(740, 30);
+            icpbRemove.IconChar = IconChar.SquareXmark;
+            icpbRemove.ForeColor = Color.FromArgb(194, 24, 7);
+            icpbRemove.Click += Remove_Click;
+
             this.Controls.Add(ptb);
             this.Controls.Add(lbItemName);
             this.Controls.Add(lbItemQuantity);
             this.Controls.Add(lbItemPrice);
+            this.Controls.Add(icpbCheck);
+            this.Controls.Add(icpbRemove);
+        }
+
+        private void Check_Click(object sender, EventArgs e)
+        {
+            if (chosed)
+            {
+                icpbCheck.IconChar = IconChar.Square;
+                chosed = false;
+            }
+            else
+            {
+                icpbCheck.IconChar = IconChar.SquareCheck;
+                chosed = true;
+            }
+        }
+
+        private void Remove_Click(object sender, EventArgs e)
+        {
+            this.Controls.Clear();
         }
     }
 }
