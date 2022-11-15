@@ -65,6 +65,7 @@ namespace Shopping_App.Forms
             rtbDescription.Size = new Size(w, h);
             rtbDescription.Location = new Point(x, y);
             rtbDescription.BorderStyle = BorderStyle.None;
+            /*rtbDescription.BackColor = Color.Transparent;*/
             rtbDescription.Font = new Font("Arial", 15, FontStyle.Regular);
             rtbDescription.ForeColor = Color.Gainsboro;
             rtbDescription.Text = "Common Name: " + plant["common name"].ToString() + "\n" + plant["descript"].ToString();

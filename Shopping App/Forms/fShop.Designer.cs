@@ -235,7 +235,7 @@
             this.btnSearch.IconColor = System.Drawing.Color.Gainsboro;
             this.btnSearch.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnSearch.IconSize = 32;
-            this.btnSearch.Location = new System.Drawing.Point(735, 5);
+            this.btnSearch.Location = new System.Drawing.Point(735, 9);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnSearch.Size = new System.Drawing.Size(36, 33);
@@ -247,7 +247,7 @@
             // 
             this.tbSearch.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.tbSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbSearch.Location = new System.Drawing.Point(314, 3);
+            this.tbSearch.Location = new System.Drawing.Point(314, 7);
             this.tbSearch.Name = "tbSearch";
             this.tbSearch.Size = new System.Drawing.Size(415, 41);
             this.tbSearch.TabIndex = 0;

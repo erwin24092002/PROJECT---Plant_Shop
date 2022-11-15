@@ -18,7 +18,7 @@ namespace Shopping_App
         private DataRow plant;
         private int quantity;
         private int w = 840;
-        private int h = 200;
+        private int h = 100;
         public CartItem(string id, int q)
         {
             MyData data = new MyData();
