@@ -289,6 +289,7 @@
             this.btnCart.Text = "Add to Cart";
             this.btnCart.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCart.UseVisualStyleBackColor = true;
+            this.btnCart.Click += new System.EventHandler(this.btnCart_Click);
             // 
             // fPlant
             // 

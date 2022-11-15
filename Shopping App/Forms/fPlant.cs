@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Resources;
@@ -80,6 +81,16 @@ namespace Shopping_App.Forms
         private void btnReview_Click(object sender, EventArgs e)
         {
             this.pPlantContent.Controls.Clear();
+        }
+
+        private void btnCart_Click(object sender, EventArgs e)
+        {
+            string filePath = @"cart.txt";
+            List<string> lines = new List<string>();
+            lines = File.ReadAllLines(filePath).ToList();
+            lines.Add(plant["id"].ToString() + "," + this.nmQuantity.Value.ToString());
+            File.WriteAllLines(filePath, lines.ToArray());
+            this.Close();
         }
     }
 }

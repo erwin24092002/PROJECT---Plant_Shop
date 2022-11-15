@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,17 +16,19 @@ namespace Shopping_App.Forms
         public fCart()
         {
             InitializeComponent();
-            Render();
+            CartRender();
         }
 
-        private void Render()
+        private void CartRender()
         {
-            MyData data = new MyData();
-            DataRowCollection plants = data.Plants.Rows;
-            for (int id = 0; id < plants.Count; id++)
+            string filePath = @"cart.txt";
+            List<string> lines = new List<string>();
+            lines = File.ReadAllLines(filePath).ToList();
+            foreach (string line in lines)
             {
-                CartItem item = new CartItem(plants[id]["id"].ToString(), id);
-                flpCart.Controls.Add(item);
+                string[] infor = line.Split(',');
+                CartItem item = new CartItem(infor[0], Int32.Parse(infor[1]));
+                this.flpCart.Controls.Add(item);
             }
         }
     }
