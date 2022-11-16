@@ -11,7 +11,17 @@
   </xs:annotation>
   <xs:element name="BillItem" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="BillItem" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="BillItem">
     <xs:complexType>
-      <xs:choice minOccurs="0" maxOccurs="unbounded" />
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="CheckOutItem" msprop:Generator_RowEvHandlerName="CheckOutItemRowChangeEventHandler" msprop:Generator_RowDeletedName="CheckOutItemRowDeleted" msprop:Generator_RowDeletingName="CheckOutItemRowDeleting" msprop:Generator_RowEvArgName="CheckOutItemRowChangeEvent" msprop:Generator_TablePropName="CheckOutItem" msprop:Generator_RowChangedName="CheckOutItemRowChanged" msprop:Generator_RowChangingName="CheckOutItemRowChanging" msprop:Generator_TableClassName="CheckOutItemDataTable" msprop:Generator_RowClassName="CheckOutItemRow" msprop:Generator_TableVarName="tableCheckOutItem" msprop:Generator_UserTableName="CheckOutItem">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Name" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_UserColumnName="Name" type="xs:string" minOccurs="0" />
+              <xs:element name="Price" msprop:Generator_ColumnPropNameInRow="Price" msprop:Generator_ColumnPropNameInTable="PriceColumn" msprop:Generator_ColumnVarNameInTable="columnPrice" msprop:Generator_UserColumnName="Price" type="xs:string" minOccurs="0" />
+              <xs:element name="Quantity" msprop:Generator_ColumnPropNameInRow="Quantity" msprop:Generator_ColumnPropNameInTable="QuantityColumn" msprop:Generator_ColumnVarNameInTable="columnQuantity" msprop:Generator_UserColumnName="Quantity" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
     </xs:complexType>
   </xs:element>
 </xs:schema>

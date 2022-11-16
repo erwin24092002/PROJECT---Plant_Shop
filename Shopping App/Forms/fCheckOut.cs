@@ -15,6 +15,9 @@ namespace Shopping_App.Forms
         public fCheckOut()
         {
             InitializeComponent();
+            this.Text = string.Empty;
+            this.ControlBox = false;
+            this.DoubleBuffered = true;
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
