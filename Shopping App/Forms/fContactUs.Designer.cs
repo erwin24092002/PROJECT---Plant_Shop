@@ -28,19 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.label6 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // fMarketing
+            // label6
+            // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Modern No. 20", 25.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(195, 9);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(453, 44);
+            this.label6.TabIndex = 10;
+            this.label6.Text = "ERWIN PLANT SHOP";
+            // 
+            // fContactUs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(871, 452);
-            this.Name = "fMarketing";
-            this.Text = "Marketing";
+            this.ClientSize = new System.Drawing.Size(857, 468);
+            this.Controls.Add(this.label6);
+            this.Name = "fContactUs";
+            this.Text = "Contact Us";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
+
+        private System.Windows.Forms.Label label6;
     }
 }

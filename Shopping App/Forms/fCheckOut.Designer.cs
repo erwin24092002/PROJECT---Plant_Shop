@@ -30,30 +30,30 @@
         {
             this.btnLogo = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbPaymentType = new System.Windows.Forms.ComboBox();
+            this.txbAddress = new System.Windows.Forms.TextBox();
+            this.txbPhoneNumber = new System.Windows.Forms.TextBox();
+            this.txbName = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgvItem = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.btnCancel = new FontAwesome.Sharp.IconButton();
             this.btnOK = new FontAwesome.Sharp.IconButton();
-            this.txbName = new System.Windows.Forms.TextBox();
-            this.txbPhoneNumber = new System.Windows.Forms.TextBox();
-            this.txbAddress = new System.Windows.Forms.TextBox();
-            this.cbPaymentType = new System.Windows.Forms.ComboBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.txbDiscount = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
             this.txbTotalCost = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.txbDiscount = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.label11 = new System.Windows.Forms.Label();
             this.dtpDeliverDate = new System.Windows.Forms.DateTimePicker();
+            this.label11 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.btnLogo)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -90,6 +90,82 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Customer";
             // 
+            // cbPaymentType
+            // 
+            this.cbPaymentType.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbPaymentType.FormattingEnabled = true;
+            this.cbPaymentType.Items.AddRange(new object[] {
+            "Cash",
+            "Card"});
+            this.cbPaymentType.Location = new System.Drawing.Point(167, 125);
+            this.cbPaymentType.Name = "cbPaymentType";
+            this.cbPaymentType.Size = new System.Drawing.Size(319, 30);
+            this.cbPaymentType.TabIndex = 7;
+            // 
+            // txbAddress
+            // 
+            this.txbAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbAddress.Location = new System.Drawing.Point(93, 93);
+            this.txbAddress.Name = "txbAddress";
+            this.txbAddress.Size = new System.Drawing.Size(393, 28);
+            this.txbAddress.TabIndex = 6;
+            // 
+            // txbPhoneNumber
+            // 
+            this.txbPhoneNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbPhoneNumber.Location = new System.Drawing.Point(149, 61);
+            this.txbPhoneNumber.Name = "txbPhoneNumber";
+            this.txbPhoneNumber.Size = new System.Drawing.Size(337, 28);
+            this.txbPhoneNumber.TabIndex = 5;
+            // 
+            // txbName
+            // 
+            this.txbName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbName.Location = new System.Drawing.Point(79, 30);
+            this.txbName.Name = "txbName";
+            this.txbName.Size = new System.Drawing.Size(407, 28);
+            this.txbName.TabIndex = 4;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(6, 130);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(155, 22);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Paymernt method:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(6, 96);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(81, 22);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Address:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(6, 64);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(137, 22);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Phone number: ";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(6, 34);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(67, 22);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Name: ";
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.dgvItem);
@@ -110,46 +186,6 @@
             this.dgvItem.RowTemplate.Height = 24;
             this.dgvItem.Size = new System.Drawing.Size(853, 227);
             this.dgvItem.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(6, 34);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 22);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Name: ";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(6, 64);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(137, 22);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Phone number: ";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(6, 96);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(81, 22);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Address:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(6, 130);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(155, 22);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Paymernt method:";
             // 
             // btnCancel
             // 
@@ -178,42 +214,6 @@
             this.btnOK.Text = "OK";
             this.btnOK.UseVisualStyleBackColor = true;
             // 
-            // txbName
-            // 
-            this.txbName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbName.Location = new System.Drawing.Point(79, 30);
-            this.txbName.Name = "txbName";
-            this.txbName.Size = new System.Drawing.Size(407, 28);
-            this.txbName.TabIndex = 4;
-            // 
-            // txbPhoneNumber
-            // 
-            this.txbPhoneNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbPhoneNumber.Location = new System.Drawing.Point(149, 61);
-            this.txbPhoneNumber.Name = "txbPhoneNumber";
-            this.txbPhoneNumber.Size = new System.Drawing.Size(337, 28);
-            this.txbPhoneNumber.TabIndex = 5;
-            // 
-            // txbAddress
-            // 
-            this.txbAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbAddress.Location = new System.Drawing.Point(93, 93);
-            this.txbAddress.Name = "txbAddress";
-            this.txbAddress.Size = new System.Drawing.Size(393, 28);
-            this.txbAddress.TabIndex = 6;
-            // 
-            // cbPaymentType
-            // 
-            this.cbPaymentType.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbPaymentType.FormattingEnabled = true;
-            this.cbPaymentType.Items.AddRange(new object[] {
-            "Cash",
-            "Card"});
-            this.cbPaymentType.Location = new System.Drawing.Point(167, 125);
-            this.cbPaymentType.Name = "cbPaymentType";
-            this.cbPaymentType.Size = new System.Drawing.Size(319, 30);
-            this.cbPaymentType.TabIndex = 7;
-            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.txbTotalCost);
@@ -227,6 +227,24 @@
             this.groupBox3.TabIndex = 8;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Cost";
+            // 
+            // txbTotalCost
+            // 
+            this.txbTotalCost.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbTotalCost.Location = new System.Drawing.Point(298, 30);
+            this.txbTotalCost.Name = "txbTotalCost";
+            this.txbTotalCost.Size = new System.Drawing.Size(207, 28);
+            this.txbTotalCost.TabIndex = 6;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(202, 33);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(99, 22);
+            this.label5.TabIndex = 5;
+            this.label5.Text = "Total cost: ";
             // 
             // txbDiscount
             // 
@@ -247,24 +265,6 @@
             this.label8.TabIndex = 0;
             this.label8.Text = "Discount:";
             // 
-            // txbTotalCost
-            // 
-            this.txbTotalCost.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbTotalCost.Location = new System.Drawing.Point(298, 30);
-            this.txbTotalCost.Name = "txbTotalCost";
-            this.txbTotalCost.Size = new System.Drawing.Size(207, 28);
-            this.txbTotalCost.TabIndex = 6;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(202, 33);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(99, 22);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "Total cost: ";
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -279,17 +279,17 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Modern No. 20", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(405, 63);
+            this.label7.Location = new System.Drawing.Point(417, 63);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(276, 24);
+            this.label7.Size = new System.Drawing.Size(239, 24);
             this.label7.TabIndex = 10;
-            this.label7.Text = "KTX Khu A, Dong Hoa Ward";
+            this.label7.Text = "A Dorm, Dong Hoa Ward";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Modern No. 20", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(400, 88);
+            this.label9.Location = new System.Drawing.Point(395, 88);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(291, 24);
             this.label9.TabIndex = 11;
@@ -317,6 +317,14 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Seller";
             // 
+            // dtpDeliverDate
+            // 
+            this.dtpDeliverDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpDeliverDate.Location = new System.Drawing.Point(10, 61);
+            this.dtpDeliverDate.Name = "dtpDeliverDate";
+            this.dtpDeliverDate.Size = new System.Drawing.Size(348, 28);
+            this.dtpDeliverDate.TabIndex = 9;
+            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -326,14 +334,6 @@
             this.label11.Size = new System.Drawing.Size(207, 22);
             this.label11.TabIndex = 8;
             this.label11.Text = "Estimated Delivery Date:";
-            // 
-            // dtpDeliverDate
-            // 
-            this.dtpDeliverDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpDeliverDate.Location = new System.Drawing.Point(10, 61);
-            this.dtpDeliverDate.Name = "dtpDeliverDate";
-            this.dtpDeliverDate.Size = new System.Drawing.Size(348, 28);
-            this.dtpDeliverDate.TabIndex = 9;
             // 
             // fCheckOut
             // 
