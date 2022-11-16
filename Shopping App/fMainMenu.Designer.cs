@@ -30,31 +30,31 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fMainMenu));
             this.pMenu = new System.Windows.Forms.Panel();
+            this.pLogo = new System.Windows.Forms.Panel();
+            this.pTitleBar = new System.Windows.Forms.Panel();
+            this.pDesktop = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.icZoomIn = new FontAwesome.Sharp.IconPictureBox();
+            this.icMinimize = new FontAwesome.Sharp.IconPictureBox();
+            this.icZoomOut = new FontAwesome.Sharp.IconPictureBox();
+            this.icExit = new FontAwesome.Sharp.IconPictureBox();
             this.btnSetting = new FontAwesome.Sharp.IconButton();
             this.btnContactUs = new FontAwesome.Sharp.IconButton();
             this.btnProfile = new FontAwesome.Sharp.IconButton();
             this.btnBlog = new FontAwesome.Sharp.IconButton();
             this.btnCart = new FontAwesome.Sharp.IconButton();
             this.btnShop = new FontAwesome.Sharp.IconButton();
-            this.pLogo = new System.Windows.Forms.Panel();
             this.btnLogo = new System.Windows.Forms.PictureBox();
-            this.pTitleBar = new System.Windows.Forms.Panel();
-            this.icZoomIn = new FontAwesome.Sharp.IconPictureBox();
-            this.icMinimize = new FontAwesome.Sharp.IconPictureBox();
-            this.icZoomOut = new FontAwesome.Sharp.IconPictureBox();
-            this.icExit = new FontAwesome.Sharp.IconPictureBox();
-            this.pDesktop = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pMenu.SuspendLayout();
             this.pLogo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnLogo)).BeginInit();
             this.pTitleBar.SuspendLayout();
+            this.pDesktop.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.icZoomIn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.icMinimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.icZoomOut)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.icExit)).BeginInit();
-            this.pDesktop.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // pMenu
@@ -72,6 +72,113 @@
             this.pMenu.Name = "pMenu";
             this.pMenu.Size = new System.Drawing.Size(207, 553);
             this.pMenu.TabIndex = 0;
+            // 
+            // pLogo
+            // 
+            this.pLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(78)))));
+            this.pLogo.Controls.Add(this.btnLogo);
+            this.pLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pLogo.Location = new System.Drawing.Point(0, 0);
+            this.pLogo.Name = "pLogo";
+            this.pLogo.Size = new System.Drawing.Size(207, 133);
+            this.pLogo.TabIndex = 0;
+            // 
+            // pTitleBar
+            // 
+            this.pTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(78)))));
+            this.pTitleBar.Controls.Add(this.icZoomIn);
+            this.pTitleBar.Controls.Add(this.icMinimize);
+            this.pTitleBar.Controls.Add(this.icZoomOut);
+            this.pTitleBar.Controls.Add(this.icExit);
+            this.pTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pTitleBar.Location = new System.Drawing.Point(207, 0);
+            this.pTitleBar.Name = "pTitleBar";
+            this.pTitleBar.Size = new System.Drawing.Size(875, 38);
+            this.pTitleBar.TabIndex = 1;
+            // 
+            // pDesktop
+            // 
+            this.pDesktop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(85)))));
+            this.pDesktop.Controls.Add(this.pictureBox1);
+            this.pDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pDesktop.Location = new System.Drawing.Point(207, 38);
+            this.pDesktop.Name = "pDesktop";
+            this.pDesktop.Size = new System.Drawing.Size(875, 515);
+            this.pDesktop.TabIndex = 3;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.pictureBox1.Image = global::Shopping_App.Properties.Resources.nobg_final_logo;
+            this.pictureBox1.Location = new System.Drawing.Point(36, 68);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(798, 366);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
+            // icZoomIn
+            // 
+            this.icZoomIn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.icZoomIn.BackColor = System.Drawing.Color.Transparent;
+            this.icZoomIn.ForeColor = System.Drawing.Color.Gainsboro;
+            this.icZoomIn.IconChar = FontAwesome.Sharp.IconChar.CompressArrowsAlt;
+            this.icZoomIn.IconColor = System.Drawing.Color.Gainsboro;
+            this.icZoomIn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.icZoomIn.Location = new System.Drawing.Point(802, 3);
+            this.icZoomIn.Name = "icZoomIn";
+            this.icZoomIn.Size = new System.Drawing.Size(32, 32);
+            this.icZoomIn.TabIndex = 5;
+            this.icZoomIn.TabStop = false;
+            this.icZoomIn.Visible = false;
+            this.icZoomIn.Click += new System.EventHandler(this.icZoomIn_Click);
+            // 
+            // icMinimize
+            // 
+            this.icMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.icMinimize.BackColor = System.Drawing.Color.Transparent;
+            this.icMinimize.ForeColor = System.Drawing.Color.Gainsboro;
+            this.icMinimize.IconChar = FontAwesome.Sharp.IconChar.WindowMaximize;
+            this.icMinimize.IconColor = System.Drawing.Color.Gainsboro;
+            this.icMinimize.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.icMinimize.Location = new System.Drawing.Point(764, 3);
+            this.icMinimize.Name = "icMinimize";
+            this.icMinimize.Size = new System.Drawing.Size(32, 32);
+            this.icMinimize.TabIndex = 4;
+            this.icMinimize.TabStop = false;
+            this.icMinimize.Click += new System.EventHandler(this.icMinimize_Click);
+            // 
+            // icZoomOut
+            // 
+            this.icZoomOut.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.icZoomOut.BackColor = System.Drawing.Color.Transparent;
+            this.icZoomOut.ForeColor = System.Drawing.Color.Gainsboro;
+            this.icZoomOut.IconChar = FontAwesome.Sharp.IconChar.ExpandArrowsAlt;
+            this.icZoomOut.IconColor = System.Drawing.Color.Gainsboro;
+            this.icZoomOut.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.icZoomOut.Location = new System.Drawing.Point(802, 3);
+            this.icZoomOut.Name = "icZoomOut";
+            this.icZoomOut.Size = new System.Drawing.Size(32, 32);
+            this.icZoomOut.TabIndex = 3;
+            this.icZoomOut.TabStop = false;
+            this.icZoomOut.Click += new System.EventHandler(this.icZoomOut_Click);
+            // 
+            // icExit
+            // 
+            this.icExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.icExit.BackColor = System.Drawing.Color.Transparent;
+            this.icExit.ForeColor = System.Drawing.Color.Gainsboro;
+            this.icExit.IconChar = FontAwesome.Sharp.IconChar.Multiply;
+            this.icExit.IconColor = System.Drawing.Color.Gainsboro;
+            this.icExit.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.icExit.Location = new System.Drawing.Point(840, 3);
+            this.icExit.Name = "icExit";
+            this.icExit.Size = new System.Drawing.Size(32, 32);
+            this.icExit.TabIndex = 2;
+            this.icExit.TabStop = false;
+            this.icExit.Click += new System.EventHandler(this.icExit_Click);
+            this.icExit.MouseLeave += new System.EventHandler(this.icExit_MouseLeave);
+            this.icExit.MouseHover += new System.EventHandler(this.icExit_MouseHover);
             // 
             // btnSetting
             // 
@@ -211,16 +318,6 @@
             this.btnShop.UseVisualStyleBackColor = true;
             this.btnShop.Click += new System.EventHandler(this.btnDashboard_Click);
             // 
-            // pLogo
-            // 
-            this.pLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(78)))));
-            this.pLogo.Controls.Add(this.btnLogo);
-            this.pLogo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pLogo.Location = new System.Drawing.Point(0, 0);
-            this.pLogo.Name = "pLogo";
-            this.pLogo.Size = new System.Drawing.Size(207, 133);
-            this.pLogo.TabIndex = 0;
-            // 
             // btnLogo
             // 
             this.btnLogo.Image = global::Shopping_App.Properties.Resources.nobg_final_logo;
@@ -231,103 +328,6 @@
             this.btnLogo.TabIndex = 0;
             this.btnLogo.TabStop = false;
             this.btnLogo.Click += new System.EventHandler(this.btnLogo_Click);
-            // 
-            // pTitleBar
-            // 
-            this.pTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(78)))));
-            this.pTitleBar.Controls.Add(this.icZoomIn);
-            this.pTitleBar.Controls.Add(this.icMinimize);
-            this.pTitleBar.Controls.Add(this.icZoomOut);
-            this.pTitleBar.Controls.Add(this.icExit);
-            this.pTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pTitleBar.Location = new System.Drawing.Point(207, 0);
-            this.pTitleBar.Name = "pTitleBar";
-            this.pTitleBar.Size = new System.Drawing.Size(875, 38);
-            this.pTitleBar.TabIndex = 1;
-            // 
-            // icZoomIn
-            // 
-            this.icZoomIn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.icZoomIn.BackColor = System.Drawing.Color.Transparent;
-            this.icZoomIn.ForeColor = System.Drawing.Color.Gainsboro;
-            this.icZoomIn.IconChar = FontAwesome.Sharp.IconChar.CompressArrowsAlt;
-            this.icZoomIn.IconColor = System.Drawing.Color.Gainsboro;
-            this.icZoomIn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.icZoomIn.Location = new System.Drawing.Point(802, 3);
-            this.icZoomIn.Name = "icZoomIn";
-            this.icZoomIn.Size = new System.Drawing.Size(32, 32);
-            this.icZoomIn.TabIndex = 5;
-            this.icZoomIn.TabStop = false;
-            this.icZoomIn.Visible = false;
-            this.icZoomIn.Click += new System.EventHandler(this.icZoomIn_Click);
-            // 
-            // icMinimize
-            // 
-            this.icMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.icMinimize.BackColor = System.Drawing.Color.Transparent;
-            this.icMinimize.ForeColor = System.Drawing.Color.Gainsboro;
-            this.icMinimize.IconChar = FontAwesome.Sharp.IconChar.WindowMaximize;
-            this.icMinimize.IconColor = System.Drawing.Color.Gainsboro;
-            this.icMinimize.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.icMinimize.Location = new System.Drawing.Point(764, 3);
-            this.icMinimize.Name = "icMinimize";
-            this.icMinimize.Size = new System.Drawing.Size(32, 32);
-            this.icMinimize.TabIndex = 4;
-            this.icMinimize.TabStop = false;
-            this.icMinimize.Click += new System.EventHandler(this.icMinimize_Click);
-            // 
-            // icZoomOut
-            // 
-            this.icZoomOut.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.icZoomOut.BackColor = System.Drawing.Color.Transparent;
-            this.icZoomOut.ForeColor = System.Drawing.Color.Gainsboro;
-            this.icZoomOut.IconChar = FontAwesome.Sharp.IconChar.ExpandArrowsAlt;
-            this.icZoomOut.IconColor = System.Drawing.Color.Gainsboro;
-            this.icZoomOut.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.icZoomOut.Location = new System.Drawing.Point(802, 3);
-            this.icZoomOut.Name = "icZoomOut";
-            this.icZoomOut.Size = new System.Drawing.Size(32, 32);
-            this.icZoomOut.TabIndex = 3;
-            this.icZoomOut.TabStop = false;
-            this.icZoomOut.Click += new System.EventHandler(this.icZoomOut_Click);
-            // 
-            // icExit
-            // 
-            this.icExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.icExit.BackColor = System.Drawing.Color.Transparent;
-            this.icExit.ForeColor = System.Drawing.Color.Gainsboro;
-            this.icExit.IconChar = FontAwesome.Sharp.IconChar.Multiply;
-            this.icExit.IconColor = System.Drawing.Color.Gainsboro;
-            this.icExit.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.icExit.Location = new System.Drawing.Point(840, 3);
-            this.icExit.Name = "icExit";
-            this.icExit.Size = new System.Drawing.Size(32, 32);
-            this.icExit.TabIndex = 2;
-            this.icExit.TabStop = false;
-            this.icExit.Click += new System.EventHandler(this.icExit_Click);
-            this.icExit.MouseLeave += new System.EventHandler(this.icExit_MouseLeave);
-            this.icExit.MouseHover += new System.EventHandler(this.icExit_MouseHover);
-            // 
-            // pDesktop
-            // 
-            this.pDesktop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(85)))));
-            this.pDesktop.Controls.Add(this.pictureBox1);
-            this.pDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pDesktop.Location = new System.Drawing.Point(207, 38);
-            this.pDesktop.Name = "pDesktop";
-            this.pDesktop.Size = new System.Drawing.Size(875, 515);
-            this.pDesktop.TabIndex = 3;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.pictureBox1.Image = global::Shopping_App.Properties.Resources.nobg_final_logo;
-            this.pictureBox1.Location = new System.Drawing.Point(36, 68);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(798, 366);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
             // 
             // fMainMenu
             // 
@@ -343,14 +343,14 @@
             this.Text = "MainMenu";
             this.pMenu.ResumeLayout(false);
             this.pLogo.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.btnLogo)).EndInit();
             this.pTitleBar.ResumeLayout(false);
+            this.pDesktop.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.icZoomIn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.icMinimize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.icZoomOut)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.icExit)).EndInit();
-            this.pDesktop.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnLogo)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -268,6 +268,7 @@
             this.btnBuy.Text = "Buy Now";
             this.btnBuy.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnBuy.UseVisualStyleBackColor = true;
+            this.btnBuy.Click += new System.EventHandler(this.btnBuy_Click);
             // 
             // btnCart
             // 

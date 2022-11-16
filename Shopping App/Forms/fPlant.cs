@@ -92,5 +92,13 @@ namespace Shopping_App.Forms
             File.WriteAllLines(filePath, lines.ToArray());
             this.Close();
         }
+
+        private void btnBuy_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            fCheckOut f = new fCheckOut();
+            f.ShowDialog();
+            this.Show();
+        }
     }
 }

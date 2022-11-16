@@ -53,8 +53,19 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BillItem.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BillItem.xsd</DependentUpon>
+    </Compile>
     <Compile Include="CartItem.cs">
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\fCheckOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\fCheckOut.Designer.cs">
+      <DependentUpon>fCheckOut.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\fPlant.cs">
       <SubType>Form</SubType>
@@ -118,6 +129,9 @@
     <EmbeddedResource Include="fMainMenu.resx">
       <DependentUpon>fMainMenu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\fCheckOut.resx">
+      <DependentUpon>fCheckOut.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\fPlant.resx">
       <DependentUpon>fPlant.cs</DependentUpon>
     </EmbeddedResource>
@@ -153,6 +167,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="BillItem.xsc">
+      <DependentUpon>BillItem.xsd</DependentUpon>
+    </None>
+    <None Include="BillItem.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BillItem.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="BillItem.xss">
+      <DependentUpon>BillItem.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
