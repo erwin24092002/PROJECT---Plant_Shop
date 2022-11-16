@@ -129,6 +129,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resource1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource1.resx</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Bill.rdlc" />
     <EmbeddedResource Include="fMainMenu.resx">
       <DependentUpon>fMainMenu.cs</DependentUpon>
@@ -171,6 +176,10 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Resource1.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <None Include="BillItem.xsc">
       <DependentUpon>BillItem.xsd</DependentUpon>
     </None>
@@ -294,6 +303,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Alocasia Reginula.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\location.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\location2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

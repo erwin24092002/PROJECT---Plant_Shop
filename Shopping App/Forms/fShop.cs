@@ -22,6 +22,7 @@ namespace Shopping_App.Forms
 
         private void Render()
         {
+            flpItems.Controls.Clear();
             MyData data = new MyData();
             DataRowCollection plants = data.Plants.Rows;
             for (int id = 0; id < plants.Count; id++)
@@ -43,7 +44,6 @@ namespace Shopping_App.Forms
 
         private void Checkbox_Click(object sender, EventArgs e)
         {
-            flpItems.Controls.Clear();
             Render();
         }
     }
