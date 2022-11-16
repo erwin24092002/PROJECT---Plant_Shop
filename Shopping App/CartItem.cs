@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Resources;
@@ -16,19 +17,20 @@ namespace Shopping_App
 {
     internal class CartItem: Panel
     {
-        private DataRow plant;
+        public DataRow plant;
         private int quantity;
         private int w = 800;
         private int h = 100;
         private bool chosed = false;
-        PictureBox ptb = new PictureBox();
-        Label lbItemName = new Label();
-        Label lbItemQuantity = new Label();
-        Label lbItemPrice = new Label();
-        IconPictureBox icpbCheck = new IconPictureBox();
-        IconPictureBox icpbRemove = new IconPictureBox();
+        public PictureBox ptb = new PictureBox();
+        public Label lbItemName = new Label();
+        public Label lbItemQuantity = new Label();
+        public Label lbItemPrice = new Label();
+        public Label lbItemDate = new Label();
+        public IconPictureBox icpbCheck = new IconPictureBox();
+        public IconPictureBox icpbRemove = new IconPictureBox();
 
-        public CartItem(string id, int q)
+        public CartItem(string id, int q, string date)
         {
             MyData data = new MyData();
             plant = data.Plants.Select("id='" + id + "'")[0];
@@ -65,6 +67,13 @@ namespace Shopping_App
             lbItemPrice.AutoSize = true;
             lbItemPrice.ForeColor = Color.LightGray;
 
+            lbItemDate.Text = date;
+            lbItemDate.TextAlign = ContentAlignment.MiddleRight;
+            lbItemDate.Location = new Point(640, 5);
+            lbItemDate.Font = new Font("Arial", 10, FontStyle.Regular);
+            lbItemDate.AutoSize = true;
+            lbItemDate.ForeColor = Color.LightGray;
+
             icpbCheck.Size = new Size(50, 50);
             icpbCheck.Location = new Point(680, 30);
             icpbCheck.IconChar = IconChar.Square;
@@ -75,12 +84,12 @@ namespace Shopping_App
             icpbRemove.Location = new Point(740, 30);
             icpbRemove.IconChar = IconChar.SquareXmark;
             icpbRemove.ForeColor = Color.FromArgb(194, 24, 7);
-            icpbRemove.Click += Remove_Click;
 
             this.Controls.Add(ptb);
             this.Controls.Add(lbItemName);
             this.Controls.Add(lbItemQuantity);
             this.Controls.Add(lbItemPrice);
+            this.Controls.Add(lbItemDate);
             this.Controls.Add(icpbCheck);
             this.Controls.Add(icpbRemove);
         }
@@ -101,7 +110,20 @@ namespace Shopping_App
 
         private void Remove_Click(object sender, EventArgs e)
         {
-            this.Controls.Clear();
+            string filePath = @"cart.txt";
+            List<string> lines = new List<string>();
+            lines = File.ReadAllLines(filePath).ToList();
+            List<string> new_lines = new List<string>();
+            foreach (string line in lines)
+            {
+                string[] infor = line.Split(',');
+                if (infor[0] == plant["id"].ToString())
+                {
+                    continue;
+                }
+                new_lines.Add(line);
+            }
+            File.WriteAllLines(filePath, new_lines.ToArray());
         }
     }
 }

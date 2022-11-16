@@ -33,15 +33,18 @@
             this.btnSearch = new FontAwesome.Sharp.IconButton();
             this.tbSearch = new System.Windows.Forms.TextBox();
             this.flpCart = new System.Windows.Forms.FlowLayoutPanel();
+            this.btnCheckOut = new FontAwesome.Sharp.IconButton();
+            this.pControl.SuspendLayout();
             this.pSearch.SuspendLayout();
             this.SuspendLayout();
             // 
             // pControl
             // 
+            this.pControl.Controls.Add(this.btnCheckOut);
             this.pControl.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pControl.Location = new System.Drawing.Point(0, 570);
+            this.pControl.Location = new System.Drawing.Point(0, 600);
             this.pControl.Name = "pControl";
-            this.pControl.Size = new System.Drawing.Size(1107, 98);
+            this.pControl.Size = new System.Drawing.Size(1107, 68);
             this.pControl.TabIndex = 1;
             // 
             // pSearch
@@ -89,8 +92,30 @@
             this.flpCart.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flpCart.Location = new System.Drawing.Point(0, 57);
             this.flpCart.Name = "flpCart";
-            this.flpCart.Size = new System.Drawing.Size(1107, 513);
+            this.flpCart.Size = new System.Drawing.Size(1107, 543);
             this.flpCart.TabIndex = 3;
+            // 
+            // btnCheckOut
+            // 
+            this.btnCheckOut.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnCheckOut.FlatAppearance.BorderSize = 0;
+            this.btnCheckOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCheckOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCheckOut.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnCheckOut.IconChar = FontAwesome.Sharp.IconChar.Store;
+            this.btnCheckOut.IconColor = System.Drawing.Color.Gainsboro;
+            this.btnCheckOut.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnCheckOut.IconSize = 32;
+            this.btnCheckOut.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCheckOut.Location = new System.Drawing.Point(446, 19);
+            this.btnCheckOut.Name = "btnCheckOut";
+            this.btnCheckOut.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnCheckOut.Size = new System.Drawing.Size(184, 37);
+            this.btnCheckOut.TabIndex = 6;
+            this.btnCheckOut.Text = "Check Out";
+            this.btnCheckOut.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCheckOut.UseVisualStyleBackColor = true;
+            this.btnCheckOut.Click += new System.EventHandler(this.btnCheckOut_Click);
             // 
             // fCart
             // 
@@ -102,6 +127,7 @@
             this.Controls.Add(this.pControl);
             this.Name = "fCart";
             this.Text = "Cart";
+            this.pControl.ResumeLayout(false);
             this.pSearch.ResumeLayout(false);
             this.pSearch.PerformLayout();
             this.ResumeLayout(false);
@@ -114,5 +140,6 @@
         private FontAwesome.Sharp.IconButton btnSearch;
         private System.Windows.Forms.TextBox tbSearch;
         private System.Windows.Forms.FlowLayoutPanel flpCart;
+        private FontAwesome.Sharp.IconButton btnCheckOut;
     }
 }

@@ -88,7 +88,8 @@ namespace Shopping_App.Forms
             string filePath = @"cart.txt";
             List<string> lines = new List<string>();
             lines = File.ReadAllLines(filePath).ToList();
-            lines.Add(plant["id"].ToString() + "," + this.nmQuantity.Value.ToString());
+            string date = DateTime.Now.ToString("MMMM dd, yyyy");
+            lines.Add(plant["id"].ToString() + "," + this.nmQuantity.Value.ToString() + "," + date);
             File.WriteAllLines(filePath, lines.ToArray());
             this.Close();
         }

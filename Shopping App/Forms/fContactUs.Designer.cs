@@ -65,13 +65,14 @@
             // 
             // icAddress
             // 
+            this.icAddress.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.icAddress.BackColor = System.Drawing.SystemColors.Control;
             this.icAddress.ForeColor = System.Drawing.SystemColors.ControlText;
             this.icAddress.IconChar = FontAwesome.Sharp.IconChar.None;
             this.icAddress.IconColor = System.Drawing.SystemColors.ControlText;
             this.icAddress.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.icAddress.IconSize = 43;
-            this.icAddress.Location = new System.Drawing.Point(96, 209);
+            this.icAddress.Location = new System.Drawing.Point(96, 185);
             this.icAddress.Name = "icAddress";
             this.icAddress.Size = new System.Drawing.Size(45, 43);
             this.icAddress.TabIndex = 13;
@@ -79,13 +80,14 @@
             // 
             // icPhoneNumber
             // 
+            this.icPhoneNumber.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.icPhoneNumber.BackColor = System.Drawing.SystemColors.Control;
             this.icPhoneNumber.ForeColor = System.Drawing.SystemColors.ControlText;
             this.icPhoneNumber.IconChar = FontAwesome.Sharp.IconChar.None;
             this.icPhoneNumber.IconColor = System.Drawing.SystemColors.ControlText;
             this.icPhoneNumber.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.icPhoneNumber.IconSize = 43;
-            this.icPhoneNumber.Location = new System.Drawing.Point(96, 273);
+            this.icPhoneNumber.Location = new System.Drawing.Point(96, 249);
             this.icPhoneNumber.Name = "icPhoneNumber";
             this.icPhoneNumber.Size = new System.Drawing.Size(45, 43);
             this.icPhoneNumber.TabIndex = 14;
@@ -93,13 +95,14 @@
             // 
             // icEmail
             // 
+            this.icEmail.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.icEmail.BackColor = System.Drawing.SystemColors.Control;
             this.icEmail.ForeColor = System.Drawing.SystemColors.ControlText;
             this.icEmail.IconChar = FontAwesome.Sharp.IconChar.None;
             this.icEmail.IconColor = System.Drawing.SystemColors.ControlText;
             this.icEmail.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.icEmail.IconSize = 43;
-            this.icEmail.Location = new System.Drawing.Point(96, 337);
+            this.icEmail.Location = new System.Drawing.Point(96, 313);
             this.icEmail.Name = "icEmail";
             this.icEmail.Size = new System.Drawing.Size(45, 43);
             this.icEmail.TabIndex = 15;
@@ -107,9 +110,10 @@
             // 
             // label7
             // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Modern No. 20", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(158, 219);
+            this.label7.Location = new System.Drawing.Point(158, 195);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(618, 24);
             this.label7.TabIndex = 16;
@@ -117,9 +121,10 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Modern No. 20", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(158, 282);
+            this.label1.Location = new System.Drawing.Point(158, 258);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(194, 24);
             this.label1.TabIndex = 17;
@@ -127,9 +132,10 @@
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Modern No. 20", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(158, 346);
+            this.label2.Location = new System.Drawing.Point(158, 322);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(280, 24);
             this.label2.TabIndex = 18;

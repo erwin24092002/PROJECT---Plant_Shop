@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FontAwesome.Sharp;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,17 +20,41 @@ namespace Shopping_App.Forms
             CartRender();
         }
 
-        private void CartRender()
+        public void CartRender()
         {
+            flpCart.Controls.Clear();
             string filePath = @"cart.txt";
             List<string> lines = new List<string>();
             lines = File.ReadAllLines(filePath).ToList();
             foreach (string line in lines)
             {
                 string[] infor = line.Split(',');
-                CartItem item = new CartItem(infor[0], Int32.Parse(infor[1]));
+                CartItem item = new CartItem(infor[0], Int32.Parse(infor[1]), infor[2] + "," + infor[3]);
+                item.icpbRemove.Click += Remove_Click;
+                item.icpbRemove.Tag = line;
                 this.flpCart.Controls.Add(item);
             }
+        }
+        private void Remove_Click(object sender, EventArgs e)
+        {
+            string filePath = @"cart.txt";
+            List<string> lines = new List<string>();
+            lines = File.ReadAllLines(filePath).ToList();
+            List<string> new_lines = new List<string>();
+            foreach (string line in lines)
+            {
+                if (line == ((IconPictureBox)sender).Tag.ToString())
+                    continue;
+                new_lines.Add(line);
+            }
+            File.WriteAllLines(filePath, new_lines.ToArray());
+            CartRender();
+        }
+
+        private void btnCheckOut_Click(object sender, EventArgs e)
+        {
+            fCheckOut f = new fCheckOut();
+            f.ShowDialog();
         }
     }
 }
