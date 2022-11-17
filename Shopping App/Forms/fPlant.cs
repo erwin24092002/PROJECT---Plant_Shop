@@ -91,6 +91,7 @@ namespace Shopping_App.Forms
             string date = DateTime.Now.ToString("MMMM dd, yyyy");
             lines.Add(plant["id"].ToString() + "," + this.nmQuantity.Value.ToString() + "," + date);
             File.WriteAllLines(filePath, lines.ToArray());
+            MessageBox.Show("Add \"" + plant["name"] + "\" to cart successfully");
             this.Close();
         }
 
@@ -101,7 +102,7 @@ namespace Shopping_App.Forms
             lines.Add(plant["id"].ToString() + "," + this.nmQuantity.Value.ToString() + "," + DateTime.Now.ToString("MMMM dd, yyyy"));
             fCheckOut f = new fCheckOut(lines);
             f.ShowDialog();
-            this.Show();
+            this.Close();
         }
     }
 }

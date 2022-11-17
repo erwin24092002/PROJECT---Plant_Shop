@@ -65,6 +65,7 @@ namespace Shopping_App.Forms
             {
                 fCheckOut f = new fCheckOut(lines);
                 f.ShowDialog();
+                CartRender();
             }
             else
             {

@@ -39,7 +39,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.dgvItem = new System.Windows.Forms.DataGridView();
+            this.lsvProduct = new System.Windows.Forms.ListView();
+            this.Name = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.UnitPrice = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Quantity = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Amount = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnCancel = new FontAwesome.Sharp.IconButton();
             this.btnOK = new FontAwesome.Sharp.IconButton();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -54,14 +58,9 @@
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.dtpDeliverDate = new System.Windows.Forms.DateTimePicker();
             this.label11 = new System.Windows.Forms.Label();
-            this.Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.UnitPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.btnLogo)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvItem)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.SuspendLayout();
@@ -99,8 +98,8 @@
             this.cbPaymentType.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbPaymentType.FormattingEnabled = true;
             this.cbPaymentType.Items.AddRange(new object[] {
-            "Cash",
-            "Card"});
+            "Before Shipment",
+            "After Shipment"});
             this.cbPaymentType.Location = new System.Drawing.Point(167, 125);
             this.cbPaymentType.Name = "cbPaymentType";
             this.cbPaymentType.Size = new System.Drawing.Size(319, 30);
@@ -136,9 +135,9 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(6, 130);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(155, 22);
+            this.label4.Size = new System.Drawing.Size(149, 22);
             this.label4.TabIndex = 3;
-            this.label4.Text = "Paymernt method:";
+            this.label4.Text = "Payment method:";
             // 
             // label3
             // 
@@ -172,7 +171,7 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.dgvItem);
+            this.groupBox2.Controls.Add(this.lsvProduct);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(12, 338);
             this.groupBox2.Name = "groupBox2";
@@ -181,20 +180,44 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Products";
             // 
-            // dgvItem
+            // lsvProduct
             // 
-            this.dgvItem.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvItem.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.lsvProduct.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.Name,
             this.UnitPrice,
             this.Quantity,
             this.Amount});
-            this.dgvItem.Location = new System.Drawing.Point(6, 29);
-            this.dgvItem.Name = "dgvItem";
-            this.dgvItem.RowHeadersWidth = 51;
-            this.dgvItem.RowTemplate.Height = 24;
-            this.dgvItem.Size = new System.Drawing.Size(853, 227);
-            this.dgvItem.TabIndex = 0;
+            this.lsvProduct.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lsvProduct.HideSelection = false;
+            this.lsvProduct.Location = new System.Drawing.Point(3, 26);
+            this.lsvProduct.Name = "lsvProduct";
+            this.lsvProduct.Size = new System.Drawing.Size(859, 233);
+            this.lsvProduct.TabIndex = 0;
+            this.lsvProduct.UseCompatibleStateImageBehavior = false;
+            this.lsvProduct.View = System.Windows.Forms.View.Details;
+            // 
+            // Name
+            // 
+            this.Name.Text = "Name";
+            this.Name.Width = 400;
+            // 
+            // UnitPrice
+            // 
+            this.UnitPrice.Text = "Unit Price";
+            this.UnitPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.UnitPrice.Width = 150;
+            // 
+            // Quantity
+            // 
+            this.Quantity.Text = "Quantity";
+            this.Quantity.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Quantity.Width = 150;
+            // 
+            // Amount
+            // 
+            this.Amount.Text = "Amount";
+            this.Amount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Amount.Width = 157;
             // 
             // btnCancel
             // 
@@ -222,6 +245,7 @@
             this.btnOK.TabIndex = 6;
             this.btnOK.Text = "OK";
             this.btnOK.UseVisualStyleBackColor = true;
+            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
             // groupBox3
             // 
@@ -328,6 +352,7 @@
             // 
             // dtpDeliverDate
             // 
+            this.dtpDeliverDate.Enabled = false;
             this.dtpDeliverDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpDeliverDate.Location = new System.Drawing.Point(10, 61);
             this.dtpDeliverDate.Name = "dtpDeliverDate";
@@ -343,38 +368,6 @@
             this.label11.Size = new System.Drawing.Size(207, 22);
             this.label11.TabIndex = 8;
             this.label11.Text = "Estimated Delivery Date:";
-            // 
-            // Name
-            // 
-            this.Name.HeaderText = "Name";
-            this.Name.MinimumWidth = 6;
-            this.Name.Name = "Name";
-            this.Name.ReadOnly = true;
-            this.Name.Width = 125;
-            // 
-            // UnitPrice
-            // 
-            this.UnitPrice.HeaderText = "Unit price";
-            this.UnitPrice.MinimumWidth = 6;
-            this.UnitPrice.Name = "UnitPrice";
-            this.UnitPrice.ReadOnly = true;
-            this.UnitPrice.Width = 125;
-            // 
-            // Quantity
-            // 
-            this.Quantity.HeaderText = "Quantity";
-            this.Quantity.MinimumWidth = 6;
-            this.Quantity.Name = "Quantity";
-            this.Quantity.ReadOnly = true;
-            this.Quantity.Width = 125;
-            // 
-            // Amount
-            // 
-            this.Amount.HeaderText = "Amount";
-            this.Amount.MinimumWidth = 6;
-            this.Amount.Name = "Amount";
-            this.Amount.ReadOnly = true;
-            this.Amount.Width = 125;
             // 
             // fCheckOut
             // 
@@ -399,7 +392,6 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvItem)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
@@ -414,7 +406,6 @@
         private System.Windows.Forms.PictureBox btnLogo;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.DataGridView dgvItem;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -437,9 +428,10 @@
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.DateTimePicker dtpDeliverDate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn UnitPrice;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Amount;
+        private System.Windows.Forms.ListView lsvProduct;
+        private System.Windows.Forms.ColumnHeader Name;
+        private System.Windows.Forms.ColumnHeader UnitPrice;
+        private System.Windows.Forms.ColumnHeader Quantity;
+        private System.Windows.Forms.ColumnHeader Amount;
     }
 }

@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Navigation;
@@ -13,6 +15,7 @@ namespace Shopping_App.Forms
 {
     public partial class fCheckOut : Form
     {
+        List<string> org_lines = new List<string>();
         List<string> lines = new List<string>();
         DataTable plants = new MyData().Plants;
         DataTable products = new DataTable();
@@ -23,6 +26,7 @@ namespace Shopping_App.Forms
             this.ControlBox = false;
             this.DoubleBuffered = true;
 
+            org_lines = l;
             int[] flag = new int[l.Count];
             for (int i=0; i < l.Count; i++)
             {
@@ -54,13 +58,67 @@ namespace Shopping_App.Forms
                 DataRow plant = plants.Select("id='" + infor[0] + "'")[0];
                 products.Rows.Add(plant["name"].ToString(), plant["price"].ToString(), Int32.Parse(infor[1]));
             }
-
-            dgvItem.DataSource = products;
+            lsvProduct.Items.Clear();
+            float totalcost = 0;
+            foreach (DataRow product in products.Rows)
+            {
+                ListViewItem lsvItem = new ListViewItem(product["name"].ToString());
+                lsvItem.SubItems.Add("$"+product["price"].ToString());
+                lsvItem.SubItems.Add(product["quantity"].ToString());
+                lsvItem.SubItems.Add("$" + (float.Parse(product["price"].ToString()) * Int32.Parse(product["quantity"].ToString())).ToString());
+                lsvProduct.Items.Add(lsvItem);
+                totalcost += float.Parse(product["price"].ToString()) * Int32.Parse(product["quantity"].ToString());
+            }
+            
+            this.dtpDeliverDate.Value = DateTime.Now.AddDays(4);
+            this.txbTotalCost.Text = "$" + totalcost.ToString();
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnOK_Click(object sender, EventArgs e)
+        {
+            if (false)
+            {
+                MessageBox.Show("You need to enter full information before payment!");
+            }
+            else
+            {
+                string filePath = @"cart.txt";
+                List<string> cart_lines = new List<string>();
+                List<string> new_lines = new List<string>();
+                cart_lines = File.ReadAllLines(filePath).ToList();
+                foreach (string cart_line in cart_lines)
+                {
+                    int flag = 1;
+                    foreach (string org_line in org_lines)
+                        if (cart_line == org_line)
+                            flag = 0;
+                    if (flag == 1)
+                        new_lines.Add(cart_line);
+                }
+                File.WriteAllLines(filePath, new_lines.ToArray());
+
+                string billPath = "bill/" + DateTime.Now.ToString("HH mm ss - MMMM dd yyyy") + ".txt";
+                List<string> infor = new List<string>();
+                FileStream billFile = File.Create(billPath);
+                billFile.Close();
+
+                infor.Add(txbName.Text);
+                infor.Add(txbPhoneNumber.Text);
+                infor.Add(txbAddress.Text);
+                infor.Add(cbPaymentType.Text);
+                infor.Add(dtpDeliverDate.Text);
+                foreach(string line in lines)
+                    infor.Add(line);
+                File.WriteAllLines(billPath, infor.ToArray());
+
+                MessageBox.Show("You paid successfully!");
+                this.Close();
+            }
         }
     }
 }
