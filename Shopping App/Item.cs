@@ -1,4 +1,5 @@
-﻿using Shopping_App.Forms;
+﻿using FontAwesome.Sharp;
+using Shopping_App.Forms;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -41,10 +42,26 @@ namespace Shopping_App
             lbItemName.ForeColor = Color.LightGray;
             pItemInfo.Controls.Add(lbItemName);
 
+            int num_star = Int32.Parse(plant["star"].ToString());
+            int w = 25;
+            int h = 25;
+            int cur_x = 125 - w * num_star / 2;
+            int cur_y = 30;
+            for(int i=1; i<=num_star; i++)
+            {
+                IconPictureBox star = new IconPictureBox();
+                star.IconChar = IconChar.Star;
+                star.ForeColor = Color.Gold;
+                star.Location = new Point(cur_x, cur_y);
+                star.Size = new Size(w, h);
+                pItemInfo.Controls.Add(star);
+                cur_x += w;
+            }
+
             Label lbItemPrice = new Label();
             lbItemPrice.Text = "$" + plant["price"].ToString();
             lbItemPrice.TextAlign = ContentAlignment.MiddleLeft;
-            lbItemPrice.Location = new Point(20, 60);
+            lbItemPrice.Location = new Point(25, 60);
             lbItemPrice.Font = new Font("Arial", 11, FontStyle.Bold);
             lbItemPrice.Size = new Size(70, 20);
             lbItemPrice.ForeColor = Color.White;
@@ -54,7 +71,7 @@ namespace Shopping_App
             btnInfo.Text = "Buy";
             btnInfo.Font = new Font("Arial", 11, FontStyle.Bold);
             btnInfo.TextAlign = ContentAlignment.MiddleCenter;
-            btnInfo.Location = new Point(158, 53);
+            btnInfo.Location = new Point(158, 54);
             btnInfo.Size = new Size(70, 30);
             btnInfo.BackColor = Color.LightGray;
             btnInfo.Tag = plant["id"];
