@@ -29,9 +29,7 @@
         private void InitializeComponent()
         {
             this.rpvBill = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.pControl = new System.Windows.Forms.Panel();
             this.icExit = new FontAwesome.Sharp.IconPictureBox();
-            this.pControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.icExit)).BeginInit();
             this.SuspendLayout();
             // 
@@ -44,15 +42,6 @@
             this.rpvBill.Size = new System.Drawing.Size(843, 630);
             this.rpvBill.TabIndex = 0;
             // 
-            // pControl
-            // 
-            this.pControl.Controls.Add(this.icExit);
-            this.pControl.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pControl.Location = new System.Drawing.Point(0, 0);
-            this.pControl.Name = "pControl";
-            this.pControl.Size = new System.Drawing.Size(843, 33);
-            this.pControl.TabIndex = 1;
-            // 
             // icExit
             // 
             this.icExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -61,7 +50,7 @@
             this.icExit.IconChar = FontAwesome.Sharp.IconChar.Multiply;
             this.icExit.IconColor = System.Drawing.Color.Gainsboro;
             this.icExit.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.icExit.Location = new System.Drawing.Point(811, 0);
+            this.icExit.Location = new System.Drawing.Point(811, 1);
             this.icExit.Name = "icExit";
             this.icExit.Size = new System.Drawing.Size(32, 32);
             this.icExit.TabIndex = 3;
@@ -75,13 +64,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(843, 630);
-            this.Controls.Add(this.pControl);
+            this.Controls.Add(this.icExit);
             this.Controls.Add(this.rpvBill);
             this.Name = "fBill";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "fBill";
             this.Load += new System.EventHandler(this.fBill_Load);
-            this.pControl.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.icExit)).EndInit();
             this.ResumeLayout(false);
 
@@ -90,7 +78,6 @@
         #endregion
 
         private Microsoft.Reporting.WinForms.ReportViewer rpvBill;
-        private System.Windows.Forms.Panel pControl;
         private FontAwesome.Sharp.IconPictureBox icExit;
     }
 }

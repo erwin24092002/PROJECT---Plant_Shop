@@ -14,17 +14,20 @@ namespace Shopping_App.Forms
 {
     public partial class fBill : Form
     {
-        public fBill()
+        private string fileName;
+        public fBill(string fn)
         {
             InitializeComponent();
             this.Text = string.Empty;
             this.ControlBox = false;
             this.DoubleBuffered = true;
+
+            fileName = fn;
         }
 
         private void fBill_Load(object sender, EventArgs e)
         {
-            this.rpvBill.RefreshReport();
+            /*this.rpvBill.RefreshReport();
             DataTable dt = new DataTable();
             dt.Columns.Add("STT", typeof(string));
             dt.Columns.Add("TenSP", typeof(string));
@@ -50,7 +53,7 @@ namespace Shopping_App.Forms
             ReportParameter para1 = new ReportParameter();
             para1.Name = "TenNV"; //Đặt đúng tên khi đặt trong report
             para1.Values.Add("Nguyễn Văn An");
-            rpvBill.LocalReport.SetParameters(new ReportParameter[] { para1/*, para2, para3, para4*/ });
+            rpvBill.LocalReport.SetParameters(new ReportParameter[] { para1*//*, para2, para3, para4*//* });*/
         }
 
         private void icExit_Click(object sender, EventArgs e)
