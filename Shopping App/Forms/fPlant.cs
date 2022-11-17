@@ -97,7 +97,9 @@ namespace Shopping_App.Forms
         private void btnBuy_Click(object sender, EventArgs e)
         {
             this.Hide();
-            fCheckOut f = new fCheckOut();
+            List<string> lines = new List<string>();
+            lines.Add(plant["id"].ToString() + "," + this.nmQuantity.Value.ToString() + "," + DateTime.Now.ToString("MMMM dd, yyyy"));
+            fCheckOut f = new fCheckOut(lines);
             f.ShowDialog();
             this.Show();
         }

@@ -727,7 +727,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>Binh Duong ProVine, Viet Nam</Value>
+                    <Value>Binh Duong Provine, Viet Nam</Value>
                     <Style>
                       <FontFamily>Modern No. 20</FontFamily>
                       <FontSize>13pt</FontSize>
@@ -1184,7 +1184,7 @@
                   <TextRun>
                     <Value>(Signature &amp; Full Name)</Value>
                     <Style>
-                      <FontSize>11pt</FontSize>
+                      <FontSize>9pt</FontSize>
                       <FontWeight>Normal</FontWeight>
                     </Style>
                   </TextRun>
@@ -1321,7 +1321,7 @@
                   <TextRun>
                     <Value>(Signature &amp; Full Name)</Value>
                     <Style>
-                      <FontSize>11pt</FontSize>
+                      <FontSize>9pt</FontSize>
                       <FontWeight>Normal</FontWeight>
                     </Style>
                   </TextRun>

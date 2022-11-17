@@ -53,8 +53,23 @@ namespace Shopping_App.Forms
 
         private void btnCheckOut_Click(object sender, EventArgs e)
         {
-            fCheckOut f = new fCheckOut();
-            f.ShowDialog();
+            List<string> lines = new List<string>();
+            foreach (CartItem item in this.flpCart.Controls)
+            {
+                if (item.icpbCheck.IconChar == IconChar.SquareCheck)
+                {
+                    lines.Add(item.icpbRemove.Tag.ToString());
+                }
+            }
+            if (lines.Count > 0)
+            {
+                fCheckOut f = new fCheckOut(lines);
+                f.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("You need to select the product before payment!");
+            }
         }
     }
 }
