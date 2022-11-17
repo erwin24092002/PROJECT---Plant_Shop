@@ -37,6 +37,12 @@ namespace Shopping_App.Forms
                     continue;
                 if (!cbExpensive.Checked && float.Parse(plants[id]["price"].ToString()) >= 30)
                     continue;
+                if (!cbLow.Checked && Int32.Parse(plants[id]["star"].ToString()) <= 2)
+                    continue;
+                if (!cbMediumQuality.Checked && Int32.Parse(plants[id]["star"].ToString()) >= 3 && Int32.Parse(plants[id]["star"].ToString()) <= 4)
+                    continue;
+                if (!cbHigh.Checked && Int32.Parse(plants[id]["star"].ToString()) == 5)
+                    continue;
                 Item item = new Item(plants[id]);
                 flpItems.Controls.Add(item);
             }
@@ -88,16 +94,16 @@ namespace Shopping_App.Forms
                     continue;
                 if (!cbLarge.Checked && plant["size"].ToString() == "l")
                     continue;
-                if (!cbCheap.Checked && float.Parse(plant["price"].ToString()) < 20)
+                if (!cbCheap.Checked && float.Parse(plant["price"].ToString()) < 30)
                     continue;
-                if (!cbExpensive.Checked && float.Parse(plant["price"].ToString()) >= 20)
+                if (!cbExpensive.Checked && float.Parse(plant["price"].ToString()) >= 30)
                     continue;
-                /*if (!cbLow.Checked && Int32.Parse(plant["star"].ToString()) <= 2)
+                if (!cbLow.Checked && Int32.Parse(plant["star"].ToString()) <= 2)
                     continue;
                 if (!cbMediumQuality.Checked && Int32.Parse(plant["star"].ToString()) > 2 && Int32.Parse(plant["star"].ToString()) <= 4)
                     continue;
                 if (!cbHigh.Checked && Int32.Parse(plant["star"].ToString()) == 5)
-                    continue;*/
+                    continue;
                 Item item = new Item(plant);
                 flpItems.Controls.Add(item);
             }

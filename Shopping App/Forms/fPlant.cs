@@ -17,6 +17,8 @@ namespace Shopping_App.Forms
     public partial class fPlant : Form
     {
         private DataRow plant;
+        private IconButton currentBtn;
+        private Panel botBorderBtn;
         public fPlant(string id)
         {
             InitializeComponent();
@@ -33,6 +35,28 @@ namespace Shopping_App.Forms
 
             this.lbPlantName.Text = plant["name"].ToString();
             this.txbTotalPrice.Text = "$" + (float.Parse(plant["price"].ToString()) * (float)this.nmQuantity.Value).ToString();
+
+            int num_star = Int32.Parse(plant["star"].ToString());
+            int w = 30;
+            int h = 30;
+            int cur_x = 230 - w * num_star / 2;
+            int cur_y = 40;
+            for (int i = 1; i <= num_star; i++)
+            {
+                IconPictureBox star = new IconPictureBox();
+                star.IconChar = IconChar.Star;
+                star.ForeColor = Color.Gold;
+                star.Location = new Point(cur_x, cur_y);
+                star.Size = new Size(w, h);
+                pPlantName.Controls.Add(star);
+                cur_x += w;
+            }
+
+            botBorderBtn = new Panel();
+            botBorderBtn.Size = new Size(184, 5);
+            pControl2.Controls.Add(botBorderBtn);
+            ActivateButton(btnDescription);
+
             Show_Description();
         }
 
@@ -66,20 +90,23 @@ namespace Shopping_App.Forms
             rtbDescription.Size = new Size(w, h);
             rtbDescription.Location = new Point(x, y);
             rtbDescription.BorderStyle = BorderStyle.None;
+            rtbDescription.Enabled = false;
             /*rtbDescription.BackColor = Color.Transparent;*/
             rtbDescription.Font = new Font("Arial", 15, FontStyle.Regular);
-            rtbDescription.ForeColor = Color.Gainsboro;
+            rtbDescription.ForeColor = Color.Black;
             rtbDescription.Text = "Common Name: " + plant["common name"].ToString() + "\n" + plant["descript"].ToString();
             this.pPlantContent.Controls.Add(rtbDescription);
         }
 
         private void btnDescription_Click(object sender, EventArgs e)
         {
+            ActivateButton(sender);
             Show_Description();
         }
 
         private void btnReview_Click(object sender, EventArgs e)
         {
+            ActivateButton(sender);
             this.pPlantContent.Controls.Clear();
         }
 
@@ -103,6 +130,37 @@ namespace Shopping_App.Forms
             fCheckOut f = new fCheckOut(lines);
             f.ShowDialog();
             this.Close();
+        }
+
+        private void ActivateButton(object senderBtn)
+        {
+            if (senderBtn != null)
+            {
+                DisableButton();
+                // Button
+                currentBtn = (IconButton)senderBtn;
+                currentBtn.BackColor = Color.WhiteSmoke;
+                currentBtn.ForeColor = Color.DodgerBlue;
+                currentBtn.IconColor = Color.DodgerBlue;
+
+                // Bot border button
+                botBorderBtn.BackColor = Color.DodgerBlue;
+                botBorderBtn.Location = new Point(currentBtn.Location.X, currentBtn.Location.Y);
+                botBorderBtn.Visible = true;
+                botBorderBtn.BringToFront();
+            }
+        }
+
+        private void DisableButton()
+        {
+            if (currentBtn != null)
+            {
+                // Button
+                currentBtn.BackColor = Color.FromArgb(0, 78, 100);
+                currentBtn.ForeColor = Color.Gainsboro;
+                currentBtn.IconColor = Color.Gainsboro;
+                currentBtn.ImageAlign = ContentAlignment.MiddleLeft;
+            }
         }
     }
 }
