@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,7 +15,8 @@ namespace Shopping_App.Forms
 {
     public partial class fBill : Form
     {
-        private string fileName;
+        private string filePath;
+        private DataTable plants = new MyData().Plants;
         public fBill(string fn)
         {
             InitializeComponent();
@@ -22,38 +24,61 @@ namespace Shopping_App.Forms
             this.ControlBox = false;
             this.DoubleBuffered = true;
 
-            fileName = fn;
+            filePath = fn;
         }
 
         private void fBill_Load(object sender, EventArgs e)
         {
-            /*this.rpvBill.RefreshReport();
-            DataTable dt = new DataTable();
-            dt.Columns.Add("STT", typeof(string));
-            dt.Columns.Add("TenSP", typeof(string));
-            dt.Columns.Add("SL", typeof(string));
-            dt.Columns.Add("Gia", typeof(string));
-            dt.Columns.Add("TT", typeof(string));
 
-            dt.Rows.Add("1", "Nước tẩy rửa đa năng", "1", "123.000", "123.000");
-            dt.Rows.Add("2", "Nước suối lavie chai 1 lít", "1", "123.000", "123.000");
-            dt.Rows.Add("3", "Nước tăng lực String", "1", "123.000", "123.000");
-            dt.Rows.Add("4", "Dầu ăn Simply chai 5 lít", "1", "123.000", "123.000");
-            dt.Rows.Add("5", "Bánh gạo One One", "1", "123.000", "123.000");
+            List<string> lines = new List<string>();
+            lines = File.ReadAllLines(filePath).ToList();
+
+            DataTable dt = new DataTable();
+            dt.Columns.Add("Name", typeof(string));
+            dt.Columns.Add("Price", typeof(string));
+            dt.Columns.Add("Quantity", typeof(int));
+            for (int i=5; i<lines.Count; i++)
+            {
+                string[] infor = lines[i].Split(',');
+                string id = infor[0];
+                int quantity = Int32.Parse(infor[1]);
+
+                DataRow plant = plants.Select("id='" + id + "'")[0];
+                dt.Rows.Add(plant["id"].ToString(), plant["price"].ToString(), quantity);
+            }
 
             rpvBill.ProcessingMode = Microsoft.Reporting.WinForms.ProcessingMode.Local;
-            rpvBill.LocalReport.ReportPath = "rptBill.rdlc"; //để file report trong Debug của project
+            //rpvBill.LocalReport.ReportPath = "Bill.rdlc"; //để file report trong Debug của project
 
             ReportDataSource dts = new ReportDataSource();
-            dts.Name = "dsReportBill"; //Đặt đúng tên khi đặt trong report -- có tên mặc định là DataSet1
+            dts.Name = "CheckOutItem"; //Đặt đúng tên khi đặt trong report -- có tên mặc định là DataSet1
             dts.Value = dt;
             rpvBill.LocalReport.DataSources.Clear();
             rpvBill.LocalReport.DataSources.Add(dts);
 
-            ReportParameter para1 = new ReportParameter();
-            para1.Name = "TenNV"; //Đặt đúng tên khi đặt trong report
-            para1.Values.Add("Nguyễn Văn An");
-            rpvBill.LocalReport.SetParameters(new ReportParameter[] { para1*//*, para2, para3, para4*//* });*/
+            ReportParameter pCustomerName = new ReportParameter();
+            pCustomerName.Name = "pCustomerName"; //Đặt đúng tên khi đặt trong report
+            pCustomerName.Values.Add(lines[0]);
+
+            ReportParameter pCustomerPhoneNumber = new ReportParameter();
+            pCustomerPhoneNumber.Name = "pCustomerPhoneNumber"; //Đặt đúng tên khi đặt trong report
+            pCustomerPhoneNumber.Values.Add(lines[1]);
+
+            ReportParameter pCustomerAddress = new ReportParameter();
+            pCustomerAddress.Name = "pCustomerAddress"; //Đặt đúng tên khi đặt trong report
+            pCustomerAddress.Values.Add(lines[2]);
+
+            ReportParameter pCustomerPaymentType = new ReportParameter();
+            pCustomerPaymentType.Name = "pCustomerPaymentType"; //Đặt đúng tên khi đặt trong report
+            pCustomerPaymentType.Values.Add(lines[3]);
+
+            ReportParameter pDeliveryDate = new ReportParameter();
+            pDeliveryDate.Name = "pDeliveryDate"; //Đặt đúng tên khi đặt trong report
+            pDeliveryDate.Values.Add(lines[4]);
+
+            rpvBill.LocalReport.SetParameters(new ReportParameter[] { pCustomerName });
+            this.rpvBill.RefreshReport();
+
         }
 
         private void icExit_Click(object sender, EventArgs e)

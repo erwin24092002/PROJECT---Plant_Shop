@@ -379,7 +379,7 @@ namespace Shopping_App {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public CheckOutItemRow AddCheckOutItemRow(string Name, string Price, string Quantity) {
+            public CheckOutItemRow AddCheckOutItemRow(string Name, string Price, int Quantity) {
                 CheckOutItemRow rowCheckOutItemRow = ((CheckOutItemRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Name,
@@ -419,7 +419,7 @@ namespace Shopping_App {
                 base.Columns.Add(this.columnName);
                 this.columnPrice = new global::System.Data.DataColumn("Price", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPrice);
-                this.columnQuantity = new global::System.Data.DataColumn("Quantity", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnQuantity = new global::System.Data.DataColumn("Quantity", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnQuantity);
             }
             
@@ -595,10 +595,10 @@ namespace Shopping_App {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string Quantity {
+            public int Quantity {
                 get {
                     try {
-                        return ((string)(this[this.tableCheckOutItem.QuantityColumn]));
+                        return ((int)(this[this.tableCheckOutItem.QuantityColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'Quantity\' in table \'CheckOutItem\' is DBNull.", e);

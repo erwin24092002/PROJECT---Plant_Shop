@@ -36,6 +36,7 @@
             // rpvBill
             // 
             this.rpvBill.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rpvBill.LocalReport.ReportEmbeddedResource = "Shopping_App.Bill.rdlc";
             this.rpvBill.Location = new System.Drawing.Point(0, 0);
             this.rpvBill.Name = "rpvBill";
             this.rpvBill.ServerReport.BearerToken = null;

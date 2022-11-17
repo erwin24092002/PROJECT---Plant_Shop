@@ -8,6 +8,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
 using System.Windows.Forms;
 
 namespace Shopping_App.Forms
@@ -70,6 +71,54 @@ namespace Shopping_App.Forms
             else
             {
                 MessageBox.Show("You need to select the product before payment!");
+            }
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            flpCart.Controls.Clear();
+            string filePath = @"cart.txt";
+            MyData data = new MyData();
+            DataRow[] plants = data.Plants.Select("name like '%" + txbSearch.Text + "%'");
+            List<string> lines = new List<string>();
+            lines = File.ReadAllLines(filePath).ToList();
+            foreach (string line in lines)
+            {
+                string[] infor = line.Split(',');
+                int flag = 0;
+                foreach (DataRow plant in plants)
+                    if (infor[0] == plant["id"].ToString())
+                        flag = 1;
+                if (flag == 0)
+                    continue;
+                CartItem item = new CartItem(infor[0], Int32.Parse(infor[1]), infor[2] + "," + infor[3]);
+                item.icpbRemove.Click += Remove_Click;
+                item.icpbRemove.Tag = line;
+                this.flpCart.Controls.Add(item);
+            }
+        }
+
+        private void txbSearch_TextChanged(object sender, EventArgs e)
+        {
+            flpCart.Controls.Clear();
+            string filePath = @"cart.txt";
+            MyData data = new MyData();
+            DataRow[] plants = data.Plants.Select("name like '%" + txbSearch.Text + "%'");
+            List<string> lines = new List<string>();
+            lines = File.ReadAllLines(filePath).ToList();
+            foreach (string line in lines)
+            {
+                string[] infor = line.Split(',');
+                int flag = 0;
+                foreach(DataRow plant in plants)
+                    if (infor[0] == plant["id"].ToString())
+                        flag = 1;
+                if (flag == 0)
+                    continue;
+                CartItem item = new CartItem(infor[0], Int32.Parse(infor[1]), infor[2] + "," + infor[3]);
+                item.icpbRemove.Click += Remove_Click;
+                item.icpbRemove.Tag = line;
+                this.flpCart.Controls.Add(item);
             }
         }
     }

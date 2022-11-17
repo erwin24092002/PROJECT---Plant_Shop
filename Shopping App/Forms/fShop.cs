@@ -46,5 +46,49 @@ namespace Shopping_App.Forms
         {
             Render();
         }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            flpItems.Controls.Clear();
+            MyData data = new MyData();
+            DataRow[] plants = data.Plants.Select("name like '%"+ txbSearch.Text +"%'");
+            foreach (DataRow plant in plants)
+            {
+                if (!cbSmall.Checked && plant["size"].ToString() == "s")
+                    continue;
+                if (!cbMediumSize.Checked && plant["size"].ToString() == "m")
+                    continue;
+                if (!cbLarge.Checked && plant["size"].ToString() == "l")
+                    continue;
+                if (!cbCheap.Checked && float.Parse(plant["price"].ToString()) < 20)
+                    continue;
+                if (!cbExpensive.Checked && float.Parse(plant["price"].ToString()) >= 20)
+                    continue;
+                Item item = new Item(plant);
+                flpItems.Controls.Add(item);
+            }
+        }
+
+        private void txbSearch_TextChanged(object sender, EventArgs e)
+        {
+            flpItems.Controls.Clear();
+            MyData data = new MyData();
+            DataRow[] plants = data.Plants.Select("name like '%" + txbSearch.Text + "%'");
+            foreach (DataRow plant in plants)
+            {
+                if (!cbSmall.Checked && plant["size"].ToString() == "s")
+                    continue;
+                if (!cbMediumSize.Checked && plant["size"].ToString() == "m")
+                    continue;
+                if (!cbLarge.Checked && plant["size"].ToString() == "l")
+                    continue;
+                if (!cbCheap.Checked && float.Parse(plant["price"].ToString()) < 20)
+                    continue;
+                if (!cbExpensive.Checked && float.Parse(plant["price"].ToString()) >= 20)
+                    continue;
+                Item item = new Item(plant);
+                flpItems.Controls.Add(item);
+            }
+        }
     }
 }
