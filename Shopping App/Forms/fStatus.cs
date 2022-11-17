@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace Shopping_App.Forms
 {
-    public partial class fProfile : Form
+    public partial class fBlog : Form
     {
-        public fProfile()
+        public fBlog()
         {
             InitializeComponent();
             BillRender();
@@ -39,5 +39,5 @@ namespace Shopping_App.Forms
             f.ShowDialog();
         }
     }
-    
+
 }

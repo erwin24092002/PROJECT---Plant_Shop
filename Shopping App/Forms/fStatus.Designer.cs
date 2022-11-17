@@ -1,6 +1,6 @@
 ﻿namespace Shopping_App.Forms
 {
-    partial class fProfile
+    partial class fBlog
     {
         /// <summary>
         /// Required designer variable.
@@ -38,17 +38,17 @@
             this.flpBill.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flpBill.Location = new System.Drawing.Point(0, 0);
             this.flpBill.Name = "flpBill";
-            this.flpBill.Size = new System.Drawing.Size(857, 468);
-            this.flpBill.TabIndex = 4;
+            this.flpBill.Size = new System.Drawing.Size(871, 452);
+            this.flpBill.TabIndex = 5;
             // 
-            // fProfile
+            // fBlog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(857, 468);
+            this.ClientSize = new System.Drawing.Size(871, 452);
             this.Controls.Add(this.flpBill);
-            this.Name = "fProfile";
-            this.Text = "Customer";
+            this.Name = "fBlog";
+            this.Text = "Product";
             this.ResumeLayout(false);
 
         }

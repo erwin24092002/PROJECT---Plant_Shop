@@ -54,7 +54,7 @@
             this.btnCheckOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCheckOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCheckOut.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnCheckOut.IconChar = FontAwesome.Sharp.IconChar.Store;
+            this.btnCheckOut.IconChar = FontAwesome.Sharp.IconChar.MoneyCheckDollar;
             this.btnCheckOut.IconColor = System.Drawing.Color.Gainsboro;
             this.btnCheckOut.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnCheckOut.IconSize = 32;
@@ -86,7 +86,7 @@
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearch.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnSearch.IconChar = FontAwesome.Sharp.IconChar.Store;
+            this.btnSearch.IconChar = FontAwesome.Sharp.IconChar.Search;
             this.btnSearch.IconColor = System.Drawing.Color.Gainsboro;
             this.btnSearch.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnSearch.IconSize = 32;

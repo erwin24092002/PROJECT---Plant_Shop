@@ -137,7 +137,7 @@
             this.btnReview.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReview.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReview.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnReview.IconChar = FontAwesome.Sharp.IconChar.Store;
+            this.btnReview.IconChar = FontAwesome.Sharp.IconChar.CommentDots;
             this.btnReview.IconColor = System.Drawing.Color.Gainsboro;
             this.btnReview.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnReview.IconSize = 32;
@@ -159,7 +159,7 @@
             this.btnDescription.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDescription.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnDescription.IconChar = FontAwesome.Sharp.IconChar.Store;
+            this.btnDescription.IconChar = FontAwesome.Sharp.IconChar.Book;
             this.btnDescription.IconColor = System.Drawing.Color.Gainsboro;
             this.btnDescription.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnDescription.IconSize = 32;
@@ -255,7 +255,7 @@
             this.btnBuy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuy.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuy.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnBuy.IconChar = FontAwesome.Sharp.IconChar.Store;
+            this.btnBuy.IconChar = FontAwesome.Sharp.IconChar.MoneyCheckDollar;
             this.btnBuy.IconColor = System.Drawing.Color.Gainsboro;
             this.btnBuy.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnBuy.IconSize = 32;
@@ -277,7 +277,7 @@
             this.btnCart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCart.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnCart.IconChar = FontAwesome.Sharp.IconChar.Store;
+            this.btnCart.IconChar = FontAwesome.Sharp.IconChar.CartShopping;
             this.btnCart.IconColor = System.Drawing.Color.Gainsboro;
             this.btnCart.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnCart.IconSize = 32;

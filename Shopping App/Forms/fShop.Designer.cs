@@ -52,6 +52,7 @@
             // 
             // pSelectBar
             // 
+            this.pSelectBar.BackColor = System.Drawing.SystemColors.Control;
             this.pSelectBar.Controls.Add(this.gbQuality);
             this.pSelectBar.Controls.Add(this.groupBox1);
             this.pSelectBar.Controls.Add(this.gbSize);
@@ -70,6 +71,7 @@
             this.gbQuality.Controls.Add(this.cbMediumQuality);
             this.gbQuality.Controls.Add(this.cbLow);
             this.gbQuality.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbQuality.ForeColor = System.Drawing.Color.Black;
             this.gbQuality.Location = new System.Drawing.Point(711, 50);
             this.gbQuality.Name = "gbQuality";
             this.gbQuality.Size = new System.Drawing.Size(285, 52);
@@ -231,8 +233,8 @@
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearch.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnSearch.IconChar = FontAwesome.Sharp.IconChar.Store;
-            this.btnSearch.IconColor = System.Drawing.Color.Gainsboro;
+            this.btnSearch.IconChar = FontAwesome.Sharp.IconChar.Search;
+            this.btnSearch.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(89)))), ((int)(((byte)(8)))));
             this.btnSearch.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnSearch.IconSize = 32;
             this.btnSearch.Location = new System.Drawing.Point(735, 9);
@@ -257,7 +259,7 @@
             // flpItems
             // 
             this.flpItems.AutoScroll = true;
-            this.flpItems.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.flpItems.BackColor = System.Drawing.Color.Silver;
             this.flpItems.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flpItems.Location = new System.Drawing.Point(0, 108);
             this.flpItems.Name = "flpItems";

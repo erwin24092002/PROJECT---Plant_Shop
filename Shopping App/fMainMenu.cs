@@ -54,7 +54,7 @@ namespace Shopping_App
                 DisableButton();
                 // Button
                 currentBtn = (IconButton)senderBtn;
-                currentBtn.BackColor = Color.FromArgb(243, 255, 228);
+                currentBtn.BackColor = Color.FromArgb(19, 159, 100);
                 currentBtn.ForeColor = RGBColors.color3;
                 currentBtn.TextAlign = ContentAlignment.MiddleCenter;
                 currentBtn.IconColor = RGBColors.color3;
@@ -75,7 +75,7 @@ namespace Shopping_App
             if (currentBtn != null)
             {
                 // Button
-                currentBtn.BackColor = Color.FromArgb(51, 51, 78);
+                currentBtn.BackColor = Color.FromArgb(11, 95, 60);
                 currentBtn.ForeColor = Color.Gainsboro;
                 currentBtn.TextAlign = ContentAlignment.MiddleLeft;
                 currentBtn.IconColor = Color.Gainsboro;
@@ -123,7 +123,7 @@ namespace Shopping_App
         private void btnCustomer_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
-            OpenChildForm(new fProfile());
+            OpenChildForm(new fHistory());
         }
         private void btnMarketing_Click(object sender, EventArgs e)
         {
