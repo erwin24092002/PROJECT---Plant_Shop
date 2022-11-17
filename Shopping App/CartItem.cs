@@ -51,7 +51,7 @@ namespace Shopping_App
             lbItemName.Location = new Point(110, 10);
             lbItemName.Font = new Font("Arial", 15, FontStyle.Bold);
             lbItemName.AutoSize = true;
-            lbItemName.ForeColor = Color.LightGray;
+            lbItemName.ForeColor = Color.Black;
 
             lbItemQuantity.Text = "Quantity: " + quantity.ToString();
             lbItemQuantity.TextAlign = ContentAlignment.MiddleCenter;

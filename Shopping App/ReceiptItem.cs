@@ -21,6 +21,7 @@ namespace Shopping_App
         public Label lbBillName = new Label();
         public Label lbBillDate = new Label();
         public IconButton icbtnBillDisplay = new IconButton();
+        PictureBox ptb = new PictureBox();
 
         public ReceiptItem(string fn)
         {
@@ -35,6 +36,18 @@ namespace Shopping_App
             lbBillName.Font = new Font("Arial", 15, FontStyle.Bold);
             lbBillName.AutoSize = true;
             lbBillName.ForeColor = Color.LightGray;
+
+            ptb.Size = new Size(90, 90);
+            ptb.Location = new Point(50, 5);
+            ResourceManager Plant = new ResourceManager("Shopping_App.Resource1", Assembly.GetExecutingAssembly());
+            string imgName = "paid";
+            List<string> lines = new List<string>();
+            lines = File.ReadAllLines(fileName).ToList();
+            if (lines[4] == "After Shipment")
+                imgName = "unpaid";
+            ptb.BackgroundImage = (Image)Plant.GetObject(imgName);
+            ptb.BackgroundImageLayout = ImageLayout.Stretch;
+            ptb.BackColor = Color.Transparent;
 
             string[] time = fileName.Split(' ');
             lbBillDate.Text = time[0].Split('/')[1] + ":" + time[1] + ":" + time[2] + " - " + time[4] + " " + time[5] + ", " + time[6].Split('.')[0];
@@ -52,6 +65,7 @@ namespace Shopping_App
             icbtnBillDisplay.TextAlign = ContentAlignment.MiddleCenter;
             icbtnBillDisplay.ForeColor = Color.FromArgb(194, 24, 7);
 
+            this.Controls.Add(ptb);
             this.Controls.Add(lbBillName);
             this.Controls.Add(lbBillDate);
             this.Controls.Add(icbtnBillDisplay);
