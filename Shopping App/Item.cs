@@ -31,7 +31,9 @@ namespace Shopping_App
             Panel pItemInfo = new Panel();
             pItemInfo.Size = new Size(250, 90);
             pItemInfo.Location = new Point(0, 250);
-            pItemInfo.BackColor = Color.DimGray;
+            //pItemInfo.BackColor = Color.FromArgb(10, 73, 45);
+            pItemInfo.BackColor = Color.FromArgb(36, 85, 1);
+
 
             Label lbItemName = new Label();
             lbItemName.Text = plant["name"].ToString();

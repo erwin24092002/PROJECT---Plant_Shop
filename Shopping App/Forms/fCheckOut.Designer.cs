@@ -67,7 +67,7 @@
             // 
             // btnLogo
             // 
-            this.btnLogo.Image = global::Shopping_App.Properties.Resources.nobg_final_logo;
+            this.btnLogo.Image = global::Shopping_App.Properties.Resources.nobg_new_logo;
             this.btnLogo.Location = new System.Drawing.Point(12, 12);
             this.btnLogo.Name = "btnLogo";
             this.btnLogo.Size = new System.Drawing.Size(204, 137);
