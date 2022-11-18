@@ -110,12 +110,12 @@ namespace Shopping_App.Forms
 
             FlowLayoutPanel flpReview = new FlowLayoutPanel();
             int w = pPlantContent.Width - pPlantContent.Width / 10;
-            int h = pPlantContent.Height - pPlantContent.Height / 10;
+            int h = pPlantContent.Height - pPlantContent.Height / 5;
             int x = pPlantContent.Width / 20;
             int y = 10;
             flpReview.Size = new Size(w, h);
             flpReview.Location = new Point(x, y);
-            flpReview.BackColor = Color.WhiteSmoke;
+            flpReview.BackColor = Color.LightGray;
 
             this.pPlantContent.Controls.Clear();
             this.pPlantContent.Controls.Add(flpReview);

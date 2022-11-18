@@ -42,7 +42,7 @@
             this.rpvBill.Location = new System.Drawing.Point(0, 0);
             this.rpvBill.Name = "rpvBill";
             this.rpvBill.ServerReport.BearerToken = null;
-            this.rpvBill.Size = new System.Drawing.Size(908, 775);
+            this.rpvBill.Size = new System.Drawing.Size(908, 828);
             this.rpvBill.TabIndex = 0;
             // 
             // icExit
@@ -66,12 +66,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(908, 778);
+            this.ClientSize = new System.Drawing.Size(908, 831);
             this.Controls.Add(this.icExit);
             this.Controls.Add(this.rpvBill);
             this.Name = "fBill";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "fBill";
+            this.Text = "Receipt";
             this.Load += new System.EventHandler(this.fBill_Load);
             ((System.ComponentModel.ISupportInitialize)(this.icExit)).EndInit();
             this.ResumeLayout(false);

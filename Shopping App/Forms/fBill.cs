@@ -44,7 +44,7 @@ namespace Shopping_App.Forms
                 int quantity = Int32.Parse(infor[1]);
 
                 DataRow plant = plants.Select("id='" + id + "'")[0];
-                dt.Rows.Add(plant["id"].ToString(), plant["price"].ToString(), quantity);
+                dt.Rows.Add(plant["name"].ToString(), "$"+plant["price"].ToString(), quantity);
             }
 
             rpvBill.ProcessingMode = Microsoft.Reporting.WinForms.ProcessingMode.Local;

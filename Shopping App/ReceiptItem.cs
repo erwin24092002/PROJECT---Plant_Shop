@@ -75,8 +75,7 @@ namespace Shopping_App
             this.Controls.Add(lbBillName);
             this.Controls.Add(lbBillDate);
             this.Controls.Add(icbtnBillDisplay);
-            if (imgName == "waiting")
-                this.Controls.Add(icpbRemove);
+            this.Controls.Add(icpbRemove);
         }
     }
 }
