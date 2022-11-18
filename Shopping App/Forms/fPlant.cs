@@ -56,7 +56,6 @@ namespace Shopping_App.Forms
             botBorderBtn.Size = new Size(184, 5);
             pControl2.Controls.Add(botBorderBtn);
             ActivateButton(btnDescription);
-
             Show_Description();
         }
 
@@ -95,6 +94,7 @@ namespace Shopping_App.Forms
             rtbDescription.Font = new Font("Arial", 15, FontStyle.Regular);
             rtbDescription.ForeColor = Color.Black;
             rtbDescription.Text = "Common Name: " + plant["common name"].ToString() + "\n" + plant["descript"].ToString();
+            this.pPlantContent.Controls.Clear();
             this.pPlantContent.Controls.Add(rtbDescription);
         }
 
@@ -107,7 +107,18 @@ namespace Shopping_App.Forms
         private void btnReview_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
+
+            FlowLayoutPanel flpReview = new FlowLayoutPanel();
+            int w = pPlantContent.Width - pPlantContent.Width / 10;
+            int h = pPlantContent.Height - pPlantContent.Height / 10;
+            int x = pPlantContent.Width / 20;
+            int y = 10;
+            flpReview.Size = new Size(w, h);
+            flpReview.Location = new Point(x, y);
+            flpReview.BackColor = Color.WhiteSmoke;
+
             this.pPlantContent.Controls.Clear();
+            this.pPlantContent.Controls.Add(flpReview);
         }
 
         private void btnCart_Click(object sender, EventArgs e)
