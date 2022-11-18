@@ -184,7 +184,7 @@
             this.pPlantContent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pPlantContent.Location = new System.Drawing.Point(0, 351);
             this.pPlantContent.Name = "pPlantContent";
-            this.pPlantContent.Size = new System.Drawing.Size(461, 385);
+            this.pPlantContent.Size = new System.Drawing.Size(461, 465);
             this.pPlantContent.TabIndex = 4;
             // 
             // panel1
@@ -197,7 +197,7 @@
             this.panel1.Controls.Add(this.btnBuy);
             this.panel1.Controls.Add(this.btnCart);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 650);
+            this.panel1.Location = new System.Drawing.Point(0, 730);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(461, 86);
             this.panel1.TabIndex = 5;
@@ -309,7 +309,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(461, 736);
+            this.ClientSize = new System.Drawing.Size(461, 816);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pPlantContent);
             this.Controls.Add(this.pControl2);

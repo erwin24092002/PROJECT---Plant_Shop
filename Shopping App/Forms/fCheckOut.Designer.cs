@@ -266,6 +266,7 @@
             this.txbTotalCost.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbTotalCost.Location = new System.Drawing.Point(298, 31);
             this.txbTotalCost.Name = "txbTotalCost";
+            this.txbTotalCost.ReadOnly = true;
             this.txbTotalCost.Size = new System.Drawing.Size(207, 28);
             this.txbTotalCost.TabIndex = 6;
             // 
@@ -284,6 +285,7 @@
             this.txbDiscount.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbDiscount.Location = new System.Drawing.Point(92, 31);
             this.txbDiscount.Name = "txbDiscount";
+            this.txbDiscount.ReadOnly = true;
             this.txbDiscount.Size = new System.Drawing.Size(69, 28);
             this.txbDiscount.TabIndex = 4;
             this.txbDiscount.Text = "0%";
