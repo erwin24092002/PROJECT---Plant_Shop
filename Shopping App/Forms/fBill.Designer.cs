@@ -35,14 +35,12 @@
             // 
             // rpvBill
             // 
-            this.rpvBill.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.rpvBill.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rpvBill.LocalReport.ReportEmbeddedResource = "Shopping_App.Bill.rdlc";
             this.rpvBill.Location = new System.Drawing.Point(0, 0);
             this.rpvBill.Name = "rpvBill";
             this.rpvBill.ServerReport.BearerToken = null;
-            this.rpvBill.Size = new System.Drawing.Size(864, 828);
+            this.rpvBill.Size = new System.Drawing.Size(864, 960);
             this.rpvBill.TabIndex = 0;
             // 
             // icExit
@@ -66,7 +64,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(864, 831);
+            this.ClientSize = new System.Drawing.Size(864, 960);
             this.Controls.Add(this.icExit);
             this.Controls.Add(this.rpvBill);
             this.Name = "fBill";

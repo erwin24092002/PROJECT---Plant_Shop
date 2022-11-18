@@ -285,6 +285,8 @@ namespace Shopping_App {
             
             private global::System.Data.DataColumn columnQuantity;
             
+            private global::System.Data.DataColumn columnAmount;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public CheckOutItemDataTable() {
@@ -344,6 +346,14 @@ namespace Shopping_App {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn AmountColumn {
+                get {
+                    return this.columnAmount;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -379,12 +389,13 @@ namespace Shopping_App {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public CheckOutItemRow AddCheckOutItemRow(string Name, string Price, int Quantity) {
+            public CheckOutItemRow AddCheckOutItemRow(string Name, string Price, int Quantity, string Amount) {
                 CheckOutItemRow rowCheckOutItemRow = ((CheckOutItemRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Name,
                         Price,
-                        Quantity};
+                        Quantity,
+                        Amount};
                 rowCheckOutItemRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowCheckOutItemRow);
                 return rowCheckOutItemRow;
@@ -410,6 +421,7 @@ namespace Shopping_App {
                 this.columnName = base.Columns["Name"];
                 this.columnPrice = base.Columns["Price"];
                 this.columnQuantity = base.Columns["Quantity"];
+                this.columnAmount = base.Columns["Amount"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -421,6 +433,8 @@ namespace Shopping_App {
                 base.Columns.Add(this.columnPrice);
                 this.columnQuantity = new global::System.Data.DataColumn("Quantity", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnQuantity);
+                this.columnAmount = new global::System.Data.DataColumn("Amount", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAmount);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -611,6 +625,22 @@ namespace Shopping_App {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Amount {
+                get {
+                    try {
+                        return ((string)(this[this.tableCheckOutItem.AmountColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Amount\' in table \'CheckOutItem\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCheckOutItem.AmountColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsNameNull() {
                 return this.IsNull(this.tableCheckOutItem.NameColumn);
             }
@@ -643,6 +673,18 @@ namespace Shopping_App {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetQuantityNull() {
                 this[this.tableCheckOutItem.QuantityColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsAmountNull() {
+                return this.IsNull(this.tableCheckOutItem.AmountColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetAmountNull() {
+                this[this.tableCheckOutItem.AmountColumn] = global::System.Convert.DBNull;
             }
         }
         
