@@ -76,7 +76,7 @@ namespace Shopping_App.Forms
             pDeliveryDate.Name = "pDeliveryDate"; //Đặt đúng tên khi đặt trong report
             pDeliveryDate.Values.Add(lines[4]);
 
-            rpvBill.LocalReport.SetParameters(new ReportParameter[] { pCustomerName });
+            rpvBill.LocalReport.SetParameters(new ReportParameter[] { pCustomerName, pCustomerPhoneNumber, pCustomerAddress, pCustomerPaymentType, pDeliveryDate });
             this.rpvBill.RefreshReport();
 
         }

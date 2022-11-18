@@ -40,7 +40,7 @@
             this.rpvBill.Location = new System.Drawing.Point(0, 0);
             this.rpvBill.Name = "rpvBill";
             this.rpvBill.ServerReport.BearerToken = null;
-            this.rpvBill.Size = new System.Drawing.Size(843, 630);
+            this.rpvBill.Size = new System.Drawing.Size(1209, 839);
             this.rpvBill.TabIndex = 0;
             // 
             // icExit
@@ -51,7 +51,7 @@
             this.icExit.IconChar = FontAwesome.Sharp.IconChar.Multiply;
             this.icExit.IconColor = System.Drawing.Color.Gainsboro;
             this.icExit.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.icExit.Location = new System.Drawing.Point(811, 1);
+            this.icExit.Location = new System.Drawing.Point(1177, 1);
             this.icExit.Name = "icExit";
             this.icExit.Size = new System.Drawing.Size(32, 32);
             this.icExit.TabIndex = 3;
@@ -64,7 +64,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(843, 630);
+            this.ClientSize = new System.Drawing.Size(1209, 839);
             this.Controls.Add(this.icExit);
             this.Controls.Add(this.rpvBill);
             this.Name = "fBill";

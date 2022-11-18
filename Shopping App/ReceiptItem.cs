@@ -21,6 +21,7 @@ namespace Shopping_App
         public Label lbBillName = new Label();
         public Label lbBillDate = new Label();
         public IconButton icbtnBillDisplay = new IconButton();
+        public IconPictureBox icpbRemove = new IconPictureBox();
         PictureBox ptb = new PictureBox();
 
         public ReceiptItem(string fn)
@@ -32,19 +33,19 @@ namespace Shopping_App
 
             lbBillName.Text = "Receipt";
             lbBillName.TextAlign = ContentAlignment.MiddleCenter;
-            lbBillName.Location = new Point(50, 38);
+            lbBillName.Location = new Point(120, 38);
             lbBillName.Font = new Font("Arial", 15, FontStyle.Bold);
             lbBillName.AutoSize = true;
             lbBillName.ForeColor = Color.LightGray;
 
-            ptb.Size = new Size(90, 90);
-            ptb.Location = new Point(50, 5);
+            ptb.Size = new Size(90, 80);
+            ptb.Location = new Point(20, 10);
             ResourceManager Plant = new ResourceManager("Shopping_App.Resource1", Assembly.GetExecutingAssembly());
             string imgName = "paid";
             List<string> lines = new List<string>();
             lines = File.ReadAllLines(fileName).ToList();
-            if (lines[4] == "After Shipment")
-                imgName = "unpaid";
+            if (lines[3] == "After Shipment")
+                imgName = "waiting";
             ptb.BackgroundImage = (Image)Plant.GetObject(imgName);
             ptb.BackgroundImageLayout = ImageLayout.Stretch;
             ptb.BackColor = Color.Transparent;
@@ -57,8 +58,13 @@ namespace Shopping_App
             lbBillDate.AutoSize = true;
             lbBillDate.ForeColor = Color.LightGray;
 
+            icpbRemove.Size = new Size(50, 50);
+            icpbRemove.Location = new Point(735, 32);
+            icpbRemove.IconChar = IconChar.SquareXmark;
+            icpbRemove.ForeColor = Color.FromArgb(194, 24, 7);
+
             icbtnBillDisplay.Size = new Size(200, 50);
-            icbtnBillDisplay.Location = new Point(578, 30);
+            icbtnBillDisplay.Location = new Point(530, 30);
             icbtnBillDisplay.IconChar = IconChar.Print;
             icbtnBillDisplay.ImageAlign = ContentAlignment.MiddleLeft;
             icbtnBillDisplay.Text = "View";
@@ -69,6 +75,8 @@ namespace Shopping_App
             this.Controls.Add(lbBillName);
             this.Controls.Add(lbBillDate);
             this.Controls.Add(icbtnBillDisplay);
+            if (imgName == "waiting")
+                this.Controls.Add(icpbRemove);
         }
     }
 }

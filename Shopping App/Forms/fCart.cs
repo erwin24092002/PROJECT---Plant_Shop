@@ -49,6 +49,7 @@ namespace Shopping_App.Forms
                 new_lines.Add(line);
             }
             File.WriteAllLines(filePath, new_lines.ToArray());
+            MessageBox.Show("Removed \"products\" from cart successfully!");
             CartRender();
         }
 

@@ -28,6 +28,8 @@ namespace Shopping_App.Forms
                 ReceiptItem rItem = new ReceiptItem(fileName);
                 rItem.icbtnBillDisplay.Click += btnView_Click;
                 rItem.icbtnBillDisplay.Tag = fileName;
+                rItem.icpbRemove.Click += btnCancel_Click;
+                rItem.icpbRemove.Tag = fileName;
                 this.flpBill.Controls.Add(rItem);
             }
         }
@@ -37,6 +39,14 @@ namespace Shopping_App.Forms
             string fn = ((IconButton)sender).Tag.ToString();
             fBill f = new fBill(fn);
             f.ShowDialog();
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            string fn = ((IconPictureBox)sender).Tag.ToString();
+            File.Delete(fn);
+            MessageBox.Show("Successful cancellation!");
+            BillRender();
         }
     }
 

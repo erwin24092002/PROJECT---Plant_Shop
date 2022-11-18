@@ -83,7 +83,7 @@
             this.icPhoneNumber.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.icPhoneNumber.BackColor = System.Drawing.SystemColors.Control;
             this.icPhoneNumber.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.icPhoneNumber.IconChar = FontAwesome.Sharp.IconChar.PhoneSquare;
+            this.icPhoneNumber.IconChar = FontAwesome.Sharp.IconChar.SquarePhone;
             this.icPhoneNumber.IconColor = System.Drawing.SystemColors.ControlText;
             this.icPhoneNumber.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.icPhoneNumber.IconSize = 43;
@@ -115,9 +115,9 @@
             this.label7.Font = new System.Drawing.Font("Modern No. 20", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(148, 195);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(618, 24);
+            this.label7.Size = new System.Drawing.Size(627, 24);
             this.label7.TabIndex = 16;
-            this.label7.Text = "Address - A Dorm, Dong Hoa Ward, Binh Duong Provine, Viet Nam";
+            this.label7.Text = "Address - A Dorm, Dong Hoa Ward, Binh Duong Province, Viet Nam";
             // 
             // label1
             // 
