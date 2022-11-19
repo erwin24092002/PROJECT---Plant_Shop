@@ -44,7 +44,10 @@ namespace Shopping_App
             string imgName = "paid";
             List<string> lines = new List<string>();
             lines = File.ReadAllLines(fileName).ToList();
-            if (lines[3] == "After Shipment")
+            bool old = false;
+            if (Int32.Parse(lines[4].Split(',')[1].Split(' ')[2]) < Int32.Parse(DateTime.Now.ToString("dd")))
+                old = true;
+            if (lines[3] == "After Shipment" && old == false)
                 imgName = "waiting";
             ptb.BackgroundImage = (Image)Plant.GetObject(imgName);
             ptb.BackgroundImageLayout = ImageLayout.Stretch;
@@ -75,7 +78,8 @@ namespace Shopping_App
             this.Controls.Add(lbBillName);
             this.Controls.Add(lbBillDate);
             this.Controls.Add(icbtnBillDisplay);
-            this.Controls.Add(icpbRemove);
+            if (old==false)
+                this.Controls.Add(icpbRemove);
         }
     }
 }
