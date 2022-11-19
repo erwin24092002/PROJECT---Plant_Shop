@@ -112,6 +112,7 @@ namespace Shopping_App.Forms
                 infor.Add(txbAddress.Text);
                 infor.Add(cbPaymentType.Text);
                 infor.Add(dtpDeliverDate.Text);
+                infor.Add(txbDiscount.Text.Split('%')[0]);
                 foreach(string line in lines)
                     infor.Add(line);
                 File.WriteAllLines(billPath, infor.ToArray());

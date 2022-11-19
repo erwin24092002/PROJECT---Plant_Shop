@@ -38,7 +38,8 @@ namespace Shopping_App.Forms
             dt.Columns.Add("Price", typeof(string));
             dt.Columns.Add("Quantity", typeof(int));
             dt.Columns.Add("Amount", typeof(string));
-            for (int i=5; i<lines.Count; i++)
+            float total = 0;
+            for (int i=6; i<lines.Count; i++)
             {
                 string[] infor = lines[i].Split(',');
                 string id = infor[0];
@@ -46,6 +47,8 @@ namespace Shopping_App.Forms
 
                 DataRow plant = plants.Select("id='" + id + "'")[0];
                 dt.Rows.Add(plant["name"].ToString(), plant["price"].ToString(), quantity, (float.Parse(plant["price"].ToString())*quantity).ToString());
+
+                total += float.Parse(plant["price"].ToString()) * quantity;
             }
 
             rpvBill.ProcessingMode = Microsoft.Reporting.WinForms.ProcessingMode.Local;
@@ -77,7 +80,22 @@ namespace Shopping_App.Forms
             pDeliveryDate.Name = "pDeliveryDate"; //Đặt đúng tên khi đặt trong report
             pDeliveryDate.Values.Add(lines[4]);
 
-            rpvBill.LocalReport.SetParameters(new ReportParameter[] { pCustomerName, pCustomerPhoneNumber, pCustomerAddress, pCustomerPaymentType, pDeliveryDate });
+            float discount = Int32.Parse(lines[5]) * total / 100;
+            float totalpayment = total - discount;
+
+            ReportParameter pTotal = new ReportParameter();
+            pTotal.Name = "pTotal"; //Đặt đúng tên khi đặt trong report
+            pTotal.Values.Add("$" + total.ToString());
+
+            ReportParameter pDiscount = new ReportParameter();
+            pDiscount.Name = "pDiscount"; //Đặt đúng tên khi đặt trong report
+            pDiscount.Values.Add("$" + discount.ToString());
+
+            ReportParameter pTotalPayment = new ReportParameter();
+            pTotalPayment.Name = "pTotalPayment"; //Đặt đúng tên khi đặt trong report
+            pTotalPayment.Values.Add("$"+totalpayment.ToString());
+
+            rpvBill.LocalReport.SetParameters(new ReportParameter[] { pCustomerName, pCustomerPhoneNumber, pCustomerAddress, pCustomerPaymentType, pDeliveryDate, pTotal, pDiscount, pTotalPayment });
             this.rpvBill.RefreshReport();
 
         }
